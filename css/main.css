@@ -1,0 +1,87 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding-top: 70px;
+}
+nav .logo {
+  margin-bottom: 90px;
+  text-align: center;
+}
+nav .logo img {
+  width: 160px;
+  margin-top: -30px;
+}
+nav .email {
+  text-align: right;
+}
+nav .menu {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+nav .menu a {
+  text-decoration: none;
+  color: #3D3D3D;
+}
+
+.header-img {
+  width: 100%;
+  height: 500px;
+  background-color: #D6FFFB;
+}
+
+.about {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.about .about-me {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.about .about-me h1 {
+  font-size: 54px;
+  letter-spacing: 6px;
+  color: #405266;
+}
+.about .about-me h1 span {
+  color: #95D3D0;
+}
+.about .about-me p:nth-child(2) {
+  font-size: 20px;
+  color: #5A7492;
+}
+.about .about-me p:nth-child(3) {
+  color: #4C4C4C;
+}
+.about .about-picture {
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 6px 40px -14px #CCCCCC;
+  margin-top: 20px;
+}
+.about .about-picture img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+.about .about-picture .filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, rgba(84, 249, 255, 0.3) 0%, rgba(132, 67, 230, 0.1) 100%);
+}
+
+.portfolio {
+  height: 700px;
+  margin-bottom: 100px;
+  background-color: #F9F9F9;
+}
