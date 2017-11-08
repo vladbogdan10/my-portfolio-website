@@ -81,7 +81,20 @@ nav .menu a {
 }
 
 .portfolio {
-  height: 700px;
+  padding-top: 100px;
   margin-bottom: 100px;
   background-color: #F9F9F9;
+}
+.portfolio .first-column .box {
+  height: 400px;
+  border: 1px solid;
+  margin-bottom: 50px;
+}
+.portfolio .second-column {
+  margin-top: 80px;
+}
+.portfolio .second-column .box {
+  border: 1px solid;
+  height: 400px;
+  margin-bottom: 50px;
 }
