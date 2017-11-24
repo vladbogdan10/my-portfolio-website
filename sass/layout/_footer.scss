@@ -1,6 +1,6 @@
 footer {
 	background-color: #333366;
-  height: 550px;
+  height: 570px;
 
 	.middle-line {
 		width: 1px;
@@ -28,28 +28,36 @@ footer {
 
   .contact-form {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 80px;
     width: 90%;
-    max-width: 800px;
+    max-width: 700px;
 
     input {
       position: relative;
       font-size: 16px;
       color: #FFFFFF;
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 22px;
       border: none;
-      line-height: 30px;
+      line-height: 36px;
       background-color: #333366;
       border-bottom: 2px solid #FFCCFF;
 
       &:focus {
         outline: none;
       }
+
+      &:focus,
+      &.not-empty {
+        + label {
+          transform: translateY(-22px);
+        }
+      }
     }
 
-    input[type=email] {
-      margin-bottom: 50px;
+    input[type=subject] {
+      padding-top: 60px;
+      font-size: 14px;
     }
 
     .button {
@@ -60,7 +68,6 @@ footer {
     input[type=submit] {
       background-color: #D7D1FE;
       font-size: 18px;
-      padding: 4px;
       color: #333366;
       border: none;
       border-radius: 2px;
@@ -68,8 +75,12 @@ footer {
     }
 
     label {
+      position: absolute;
+      bottom: 36px;
       color: #8284B2;
       cursor: text;
+      transition: transform .2s ease-in-out;
     }
   }
 }
+

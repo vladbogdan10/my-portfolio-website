@@ -142,7 +142,7 @@ nav .menu a {
 
 footer {
   background-color: #333366;
-  height: 550px;
+  height: 570px;
 }
 footer .middle-line {
   width: 1px;
@@ -167,26 +167,30 @@ footer h1 {
 }
 footer .contact-form {
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 80px;
   width: 90%;
-  max-width: 800px;
+  max-width: 700px;
 }
 footer .contact-form input {
   position: relative;
   font-size: 16px;
   color: #FFFFFF;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
   border: none;
-  line-height: 30px;
+  line-height: 36px;
   background-color: #333366;
   border-bottom: 2px solid #FFCCFF;
 }
 footer .contact-form input:focus {
   outline: none;
 }
-footer .contact-form input[type=email] {
-  margin-bottom: 50px;
+footer .contact-form input:focus + label, footer .contact-form input.not-empty + label {
+  transform: translateY(-22px);
+}
+footer .contact-form input[type=subject] {
+  padding-top: 60px;
+  font-size: 14px;
 }
 footer .contact-form .button {
   margin: 0 auto;
@@ -195,13 +199,15 @@ footer .contact-form .button {
 footer .contact-form input[type=submit] {
   background-color: #D7D1FE;
   font-size: 18px;
-  padding: 4px;
   color: #333366;
   border: none;
   border-radius: 2px;
   margin-top: 50px;
 }
 footer .contact-form label {
+  position: absolute;
+  bottom: 36px;
   color: #8284B2;
   cursor: text;
+  transition: transform .2s ease-in-out;
 }
