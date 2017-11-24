@@ -33,36 +33,47 @@ nav .menu a {
 .header-img {
   width: 100%;
   height: 500px;
-  background-color: #F9F9F9;
+  background-color: #CAFAFE;
 }
 
 .about {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 12%;
+  margin-bottom: 12%;
 }
-.about .about-me {
-  max-width: 400px;
+.about h1 {
+  text-align: right;
+  color: #525252;
+}
+.about .wrapper {
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
-.about .about-me h1 {
+.about .about-me p:nth-child(1) {
+  text-align: right;
   font-size: 54px;
-  letter-spacing: 6px;
+  letter-spacing: 5px;
+  line-height: 50px;
   color: #405266;
 }
-.about .about-me h1 span {
+.about .about-me p:nth-child(1) span {
   color: #95D3D0;
 }
 .about .about-me p:nth-child(2) {
+  text-align: right;
   font-size: 20px;
   color: #5A7492;
 }
 .about .about-me p:nth-child(3) {
+  text-align: right;
   color: #4C4C4C;
+}
+.about .skills p {
+  text-align: right;
 }
 .about .about-picture {
   position: relative;
   margin: 0 auto;
-  box-shadow: 0 6px 40px -14px #CCCCCC;
   margin-top: 20px;
 }
 .about .about-picture img {
@@ -80,16 +91,11 @@ nav .menu a {
   background: linear-gradient(45deg, rgba(84, 249, 255, 0.3) 0%, rgba(132, 67, 230, 0.1) 100%);
 }
 
-.portfolio {
-  padding-top: 100px;
-  margin-bottom: 100px;
-  background-color: #F9F9F9;
-}
 .portfolio h1 {
   color: #4F4F4F;
 }
 .portfolio img {
-  width: 50%;
+  width: 40%;
 }
 .portfolio .box {
   background-color: #F1F1F1;
@@ -97,22 +103,22 @@ nav .menu a {
 }
 .portfolio .box1 {
   text-align: center;
-  padding: 10% 0 10% 0;
+  padding: 11% 0 11% 0;
 }
 .portfolio .box2 {
   text-align: center;
   margin-bottom: 4%;
-  padding: 9% 0 9% 0;
+  padding: 7% 0 7% 0;
 }
 .portfolio .box2 img {
-  width: 60%;
+  width: 58.6%;
 }
 .portfolio .box3 {
   text-align: center;
-  padding: 8.5% 0 8.5% 0;
+  padding: 7% 0 7% 0;
 }
 .portfolio .box3 img {
-  width: 60%;
+  width: 59%;
 }
 .portfolio .box4 {
   text-align: center;
@@ -120,10 +126,10 @@ nav .menu a {
 }
 .portfolio .box5 {
   text-align: center;
-  padding: 21% 0 21% 0;
+  padding: 18.5% 0 18.5% 0;
 }
 .portfolio .box5 img {
-  width: 81%;
+  width: 66%;
 }
 .portfolio .box6 {
   text-align: center;
@@ -132,4 +138,70 @@ nav .menu a {
 }
 .portfolio .gutter {
   padding: 1%;
+}
+
+footer {
+  background-color: #333366;
+  height: 550px;
+}
+footer .middle-line {
+  width: 1px;
+  height: 50px;
+  border-right: 1px solid #FFCCFF;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+footer p {
+  color: #FFCCFF;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 100px;
+  margin-top: -15px;
+}
+footer h1 {
+  color: #FFFFFF;
+  font-size: 38px;
+  text-align: center;
+  margin-top: -15px;
+  letter-spacing: 2px;
+}
+footer .contact-form {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 90%;
+  max-width: 800px;
+}
+footer .contact-form input {
+  position: relative;
+  font-size: 16px;
+  color: #FFFFFF;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  line-height: 30px;
+  background-color: #333366;
+  border-bottom: 2px solid #FFCCFF;
+}
+footer .contact-form input:focus {
+  outline: none;
+}
+footer .contact-form input[type=email] {
+  margin-bottom: 50px;
+}
+footer .contact-form .button {
+  margin: 0 auto;
+  width: 150px;
+}
+footer .contact-form input[type=submit] {
+  background-color: #D7D1FE;
+  font-size: 18px;
+  padding: 4px;
+  color: #333366;
+  border: none;
+  border-radius: 2px;
+  margin-top: 50px;
+}
+footer .contact-form label {
+  color: #8284B2;
+  cursor: text;
 }

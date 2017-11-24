@@ -1,14 +1,24 @@
 .about {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 12%;
+  margin-bottom: 12%;
+
+  h1 {
+  	text-align: right;
+  	color: #525252;
+  }
+
+  .wrapper {
+  	width: 100%;
+  	max-width: 800px;
+  	margin: 0 auto;
+  }
 
   .about-me {
-    max-width: 400px;
-    margin: 0 auto;
-
-    h1 {
+    p:nth-child(1) {
+    	text-align: right;
       font-size: 54px;
-      letter-spacing: 6px;
+      letter-spacing: 5px;
+      line-height: 50px;
       color: #405266;
 
       span {
@@ -17,19 +27,27 @@
     }
 
     p:nth-child(2) {
+    	text-align: right;
       font-size: 20px;
       color: #5A7492;
     }
 
     p:nth-child(3) {
+    	text-align: right;
       color: #4C4C4C;
     }
   }
 
+  .skills {
+  	p {
+  		text-align: right;
+  	}
+  }
+
+
   .about-picture {
     position: relative;
     margin: 0 auto;
-    box-shadow: 0 6px 40px -14px #CCCCCC;
     margin-top: 20px;
 
     img {
