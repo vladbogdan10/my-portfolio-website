@@ -31,6 +31,10 @@ nav {
 
 .header-img {
   width: 100%;
-  height: 500px;
-  background-color: #CAFAFE;
+  height: 700px;
+  background: url(../pictures/trees3.png) no-repeat center center;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
