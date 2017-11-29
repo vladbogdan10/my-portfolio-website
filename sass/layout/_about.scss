@@ -1,70 +1,59 @@
 .about {
-  
-  padding-bottom: 12%;
-  background-color: rgb(247, 247, 247);
 
   h1 {
   	text-align: right;
-  	color: #525252;
-  }
-
-  .wrapper {
-  	width: 100%;
-  	max-width: 800px;
-  	margin: 0 auto;
+  	color: #E6E6E6;
+    margin-bottom: 50px;
   }
 
   .about-me {
-    p:nth-child(1) {
-    	text-align: right;
-      font-size: 54px;
-      letter-spacing: 5px;
-      line-height: 50px;
-      color: #405266;
-
-      span {
-        color: #95D3D0;
-      }
-    }
-
-    p:nth-child(2) {
-    	text-align: right;
-      font-size: 20px;
-      color: #5A7492;
-    }
-
-    p:nth-child(3) {
-    	text-align: right;
-      color: #4C4C4C;
-    }
-  }
-
-  .skills {
-  	p {
-  		text-align: right;
-  	}
-  }
-
-
-  .about-picture {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 22px;
+    color: #808080;
 
     img {
       width: 100%;
-      max-width: 400px;
-      display: block;
-      margin: 0 auto;
+      max-width: 350px;
     }
 
-    .filter {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: linear-gradient(45deg, rgba(84,249,255,0.3) 0%, rgba(132,67,230,0.1) 100%);
+    p:nth-child(2) {
+      span {
+        color: #4C4C4C;
+        font-weight: bold;
+        font-family: 'Delius', cursive;
+      }
     }
+
+    p:nth-child(3) {
+      color: #4C4C4C;
+      font-weight: bold;
+      font-family: 'Delius', cursive;
+    }
+
+    p:nth-child(5) {
+      color: #4C4C4C;
+      
+      font-weight: bold;
+      font-family: 'Delius', cursive;
+    }
+
+    p:nth-child(7) {
+      font-size: 18px;
+    }
+
+    p:nth-child(8) {
+      line-height: 50px;
+      font-size: 20px;
+      color: #4C4C4C;
+    }
+  }
+  .middle-line {
+    width: 1px;
+    height: 50px;
+    border-right: 1px solid #E6E6E6;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }

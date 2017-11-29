@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vlad B.</title>
     <link rel="stylesheet" href="css/bootstrap-grid12.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://use.fontawesome.com/e7fedb021e.js"></script>
 </head>
@@ -28,15 +29,17 @@
                     </div>
                 </div>
                 <div class="menu">
-                    <div class="col-xs-4">
-                        <a href="#" title="About">About</a>
-                    </div>
-                    <div class="col-xs-4">
-                        <a href="#" title="Portfolio">Portfolio</a>
-                    </div>
-                    <div class="col-xs-4">
-                        <a href="#" title="Contact">Contact</a>
-                    </div>
+                    <ul>
+                        <div class="col-xs-4">
+                            <li>About</li>
+                        </div>
+                        <div class="col-xs-4">
+                            <li>Portfolio</li>
+                        </div>
+                        <div class="col-xs-4">
+                            <li>Contact</li>
+                        </div>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -47,38 +50,27 @@
         <section class="about">
             <div class="container">
                 <h1>ABOUT</h1>
-                <div class="row">
-                    <div class="wrapper">
-                        <div class="col-sm-6">
-                            <div class="about-me">
-                                <p>
-                                    Little<br>
-                                    <span>About</span><br>
-                                    Myself
-                                </p>
-                                <p>
-                                    The name is Vlad Bogdan and I'm a Web Developer and Web Designer.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                                </p>
-                            </div>
-                            <div class="skills">
-                                <p>
-                                    <sub>And the technologies I'm currently using:</sub>
-                                </p>
-                                <p>
-                                    HTML5 - CSS3 - JavaScript - jQuery - Sass - AJAX - Bootstrap - Git - Photoshop
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="about-picture">
-                                <img src="pictures/me.png" alt="myself">
-                                <div class="filter"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="about-me">
+                    <img src="pictures/hi-there.svg" alt="">
+                    <p>
+                        my name is <span>Vlad</span>. I am a self-taught
+                    </p>
+                    <p>
+                        <span>Web Developer &amp; Designer</span>
+                    </p>
+                    <p>
+                        based in the beautiful city of
+                    </p>
+                    <p>
+                        <span>Munich</span>
+                    </p>
+                    <div class="middle-line"></div>
+                    <p>
+                        Technologies I'm currently using
+                    </p>
+                    <p>
+                        HTML5 &nbsp; CSS3 &nbsp; JavaScript &nbsp; jQuery &nbsp; Sass &nbsp; Bootstrap &nbsp; Git &nbsp; Photoshop
+                    </p>
                 </div>
             </div>
         </section>
@@ -120,34 +112,46 @@
     </main>
     <!-- /main -->
     <footer>
-        <div class="container">
-            <div class="middle-line"></div>
-            <p>Get in touch</p>
-            <h1>CONTACT</h1>
-            <div class="contact-form">
-                <form>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <input class="js-input" type="text" name="name" required>
-                            <label for="name">Name</label>
+        <div class="footer">
+            <div class="container">
+                <div class="middle-line"></div>
+                <p>Get in touch</p>
+                <h1>CONTACT</h1>
+                <div class="contact-form">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input class="js-input" type="text" name="name" required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input class="js-input" type="email" name="email" required>
+                                <label for="name">Email</label>
+                            </div>
+                            <div class="col-xs-12">
+                                <input class="js-input" type="subject" name="subject" required>
+                                <label for="name">Message</label>
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="SEND">
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <input class="js-input" type="email" name="email" required>
-                            <label for="name">Email</label>
-                        </div>
-                        <div class="col-xs-12">
-                            <input class="js-input" type="subject" name="subject" required>
-                            <label for="name">Message</label>
-                        </div>
-                        <div class="button">
-                        	<input type="submit" value="SEND">
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="col-xs-6">
+                <p>&copy; 2017 Vlad Bogdan</p>
+            </div>
+            <div class="col-xs-6 social-icons">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-github" aria-hidden="true"></i>
             </div>
         </div>
     </footer>
-
     <script src="script.js" type="text/javascript"></script>
 </body>
 

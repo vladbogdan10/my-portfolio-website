@@ -1,11 +1,22 @@
+html {
+  background-color: #F0F0F0;
+}
+
 body {
-  font-family: Arial;
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
   padding: 0;
+  box-shadow: 0 0 26px -2px #CCCCCC;
 }
 
 nav {
   padding-top: 70px;
+}
+nav .social-icons i {
+  font-size: 20px;
 }
 nav .logo {
   margin-bottom: 90px;
@@ -25,81 +36,75 @@ nav .menu {
   margin-bottom: 60px;
   font-size: 18px;
 }
-nav .menu a {
-  text-decoration: none;
+nav .menu ul {
+  list-style-type: none;
   color: #3D3D3D;
+  padding: 0;
+  margin: 0;
 }
 
 .header-img {
   width: 100%;
   height: 700px;
-  background: url(../pictures/trees3.png) no-repeat center center;
+  background: url(../pictures/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.about {
-  padding-bottom: 12%;
-  background-color: #f7f7f7;
-}
 .about h1 {
   text-align: right;
-  color: #525252;
+  color: #E6E6E6;
+  margin-bottom: 50px;
 }
-.about .wrapper {
+.about .about-me {
+  text-align: center;
+  font-size: 24px;
+  line-height: 22px;
+  color: #808080;
+}
+.about .about-me img {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 350px;
 }
-.about .about-me p:nth-child(1) {
-  text-align: right;
-  font-size: 54px;
-  letter-spacing: 5px;
-  line-height: 50px;
-  color: #405266;
-}
-.about .about-me p:nth-child(1) span {
-  color: #95D3D0;
-}
-.about .about-me p:nth-child(2) {
-  text-align: right;
-  font-size: 20px;
-  color: #5A7492;
+.about .about-me p:nth-child(2) span {
+  color: #4C4C4C;
+  font-weight: bold;
+  font-family: 'Delius', cursive;
 }
 .about .about-me p:nth-child(3) {
-  text-align: right;
+  color: #4C4C4C;
+  font-weight: bold;
+  font-family: 'Delius', cursive;
+}
+.about .about-me p:nth-child(5) {
+  color: #4C4C4C;
+  font-weight: bold;
+  font-family: 'Delius', cursive;
+}
+.about .about-me p:nth-child(7) {
+  font-size: 18px;
+}
+.about .about-me p:nth-child(8) {
+  line-height: 50px;
+  font-size: 20px;
   color: #4C4C4C;
 }
-.about .skills p {
-  text-align: right;
-}
-.about .about-picture {
-  position: relative;
+.about .middle-line {
+  width: 1px;
+  height: 50px;
+  border-right: 1px solid #E6E6E6;
   margin: 0 auto;
   margin-top: 20px;
-}
-.about .about-picture img {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 0 auto;
-}
-.about .about-picture .filter {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(45deg, rgba(84, 249, 255, 0.3) 0%, rgba(132, 67, 230, 0.1) 100%);
+  margin-bottom: 20px;
 }
 
 .portfolio {
-  background-color: #f7f7f7;
+  margin-top: 8%;
 }
 .portfolio h1 {
-  color: #4F4F4F;
+  color: #E6E6E6;
 }
 .portfolio img {
   width: 40%;
@@ -147,38 +152,37 @@ nav .menu a {
   padding: 1%;
 }
 
-footer {
+.footer {
   background-color: #333366;
-  height: 570px;
 }
-footer .middle-line {
+.footer .middle-line {
   width: 1px;
   height: 50px;
-  border-right: 1px solid #FFCCFF;
+  border-right: 1px solid #FFCC66;
   margin: 0 auto;
   margin-top: 20px;
 }
-footer p {
-  color: #FFCCFF;
+.footer p {
+  color: #FFCC66;
   font-size: 16px;
   text-align: center;
   margin-left: 100px;
   margin-top: -15px;
 }
-footer h1 {
+.footer h1 {
   color: #FFFFFF;
   font-size: 38px;
   text-align: center;
   margin-top: -15px;
   letter-spacing: 2px;
 }
-footer .contact-form {
+.footer .contact-form {
   margin: 0 auto;
   margin-top: 80px;
   width: 90%;
   max-width: 700px;
 }
-footer .contact-form input {
+.footer .contact-form input {
   position: relative;
   font-size: 16px;
   color: #FFFFFF;
@@ -187,34 +191,50 @@ footer .contact-form input {
   border: none;
   line-height: 36px;
   background-color: #333366;
-  border-bottom: 2px solid #FFCCFF;
+  border-bottom: 2px solid #FFCC66;
 }
-footer .contact-form input:focus {
+.footer .contact-form input:focus {
   outline: none;
 }
-footer .contact-form input:focus + label, footer .contact-form input.not-empty + label {
+.footer .contact-form input:focus + label, .footer .contact-form input.not-empty + label {
   transform: translateY(-22px);
 }
-footer .contact-form input[type=subject] {
+.footer .contact-form input[type=subject] {
   padding-top: 60px;
   font-size: 14px;
 }
-footer .contact-form .button {
+.footer .contact-form .button {
   margin: 0 auto;
   width: 150px;
 }
-footer .contact-form input[type=submit] {
-  background-color: #D7D1FE;
+.footer .contact-form input[type=submit] {
+  background-color: #FFCC66;
   font-size: 18px;
   color: #333366;
   border: none;
   border-radius: 2px;
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
 }
-footer .contact-form label {
+.footer .contact-form label {
   position: absolute;
+  left: 15px;
   bottom: 36px;
-  color: #8284B2;
+  color: #FFCC66;
   cursor: text;
   transition: transform .2s ease-in-out;
+}
+
+.footer-bottom {
+  height: 44px;
+  background-color: #000000;
+}
+.footer-bottom p {
+  color: #CCCEE8;
+  font-size: 14px;
+}
+.footer-bottom .social-icons {
+  color: #CCCEE8;
+  text-align: right;
+  font-size: 18px;
+  margin-top: 12px;
 }
