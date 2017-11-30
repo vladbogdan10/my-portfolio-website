@@ -1,3 +1,5 @@
+@import 'helpers/middle-line';
+
 .about {
 
   h1 {
@@ -17,25 +19,13 @@
       max-width: 350px;
     }
 
-    p:nth-child(2) {
-      span {
-        color: #4C4C4C;
-        font-weight: bold;
-        font-family: 'Delius', cursive;
-      }
+    .span-style {
+      color: #4C4C4C;
+      font-family: "Comic Sans MS", cursive, sans-serif;
     }
 
-    p:nth-child(3) {
-      color: #4C4C4C;
-      font-weight: bold;
-      font-family: 'Delius', cursive;
-    }
-
-    p:nth-child(5) {
-      color: #4C4C4C;
-      
-      font-weight: bold;
-      font-family: 'Delius', cursive;
+    .middle-line {
+      @include middle-line(50px, #E6E6E6);
     }
 
     p:nth-child(7) {
@@ -46,14 +36,7 @@
       line-height: 50px;
       font-size: 20px;
       color: #4C4C4C;
+      font-weight: bold;
     }
-  }
-  .middle-line {
-    width: 1px;
-    height: 50px;
-    border-right: 1px solid #E6E6E6;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 }

@@ -1,0 +1,6 @@
+@mixin middle-line($height, $color) {
+	width: 1px;
+	height: $height;
+	border-right: 1px solid $color;
+	margin: 0 auto;
+}

@@ -1,12 +1,11 @@
+@import 'helpers/middle-line';
+
 .footer {
   background-color: #333366;
 
 	.middle-line {
-		width: 1px;
-		height: 50px;
-		border-right: 1px solid #FFCC66;
-		margin: 0 auto;
-		margin-top: 20px;
+		@include middle-line(50px, #FFCC66);
+    margin-top: 20px;
 	}
 
 	p {
@@ -21,48 +20,58 @@
 		color: #FFFFFF;
 		font-size: 38px;
 		text-align: center;
-		margin-top: -15px;
+		margin-top: -25px;
     letter-spacing: 2px;
 	}
+}
 
-  .contact-form {
+
+.contact-form {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 90%;
+  max-width: 700px;
+
+  input {
+    position: relative;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 100%;
+    margin-bottom: 22px;
+    border: none;
+    line-height: 36px;
+    background-color: #333366;
+    border-bottom: 2px solid #FFCC66;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus,
+    &.not-empty {
+      + label {
+        transform: translateY(-22px);
+      }
+    }
+  }
+
+  input[type=subject] {
+    padding-top: 60px;
+    font-size: 14px;
+  }
+
+  label {
+    position: absolute;
+    left: 15px;
+    bottom: 36px;
+    color: #FFCC66;
+    cursor: text;
+    transition: transform .2s ease-in-out;
+  }
+
+  .button {
     margin: 0 auto;
-    margin-top: 80px;
-    width: 90%;
-    max-width: 700px;
-
-    input {
-      position: relative;
-      font-size: 16px;
-      color: #FFFFFF;
-      width: 100%;
-      margin-bottom: 22px;
-      border: none;
-      line-height: 36px;
-      background-color: #333366;
-      border-bottom: 2px solid #FFCC66;
-
-      &:focus {
-        outline: none;
-      }
-
-      &:focus,
-      &.not-empty {
-        + label {
-          transform: translateY(-22px);
-        }
-      }
-    }
-
-    input[type=subject] {
-      padding-top: 60px;
-      font-size: 14px;
-    }
-
-    .button {
-      margin: 0 auto;
-      width: 150px;
-    }
+    width: 150px;
 
     input[type=submit] {
       background-color: #FFCC66;
@@ -72,20 +81,12 @@
       border-radius: 2px;
       margin: 50px 0 50px 0;
     }
-
-    label {
-      position: absolute;
-      left: 15px;
-      bottom: 36px;
-      color: #FFCC66;
-      cursor: text;
-      transition: transform .2s ease-in-out;
-    }
   }
 }
 
+
 .footer-bottom {
-  height: 44px;
+  height: 48px;
   background-color: #000000;
 
   p {
