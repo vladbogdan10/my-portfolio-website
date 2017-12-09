@@ -1,8 +1,29 @@
+@import 'helpers/slideinleft';
+@import 'helpers/slideinright';
+
 nav {
   padding-top: 70px;
 
-  .social-icons i {
+  .social-icons {
     font-size: 20px;
+    @include slide-left-speed(0.4s);
+  }
+
+  .social-icons-2 {
+    font-size: 20px;
+    text-align: right;
+    @include slide-right-speed(0.4s);
+  }
+
+  i {
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+
+    &:hover {
+      cursor: pointer;
+      text-shadow: 2px 2px 2px #CCCCCC;
+      color: #FFCC66;
+    }
   }
 
   .logo {
@@ -10,13 +31,10 @@ nav {
     text-align: center;
 
     img {
-      width: 140px;
-      margin-top: -30px;
+      width: 100%;
+      max-width: 140px;
+      margin-top: -20px;
     }
-  }
-
-  .email {
-    text-align: right;
   }
 
   .menu {
@@ -36,9 +54,11 @@ nav {
   }
 }
 
+
 .header-img {
+  margin-top: 10%;
   width: 100%;
-  height: 700px;
+  height: 500px;
   background: url(../pictures/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

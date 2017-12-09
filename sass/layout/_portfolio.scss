@@ -1,65 +1,74 @@
 .portfolio {
   margin-top: 8%;
+  margin-bottom: 10%;
 
   h1 {
     color: #E6E6E6;
   }
 
   img {
-    width: 40%;
+    width: 42%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); 
+  }
+
+  img:hover {
+    width: 46%;
+  }
+
+  .portfolio-img-2,
+  .portfolio-img-3,
+  .portfolio-img-5,
+  .portfolio-img-6 {
+    width: 62%;
+  }
+
+  .portfolio-img-6 {
+    width: 34%;
   }
 
   .box {
     background-color: #F1F1F1;
-    border-radius: 2px;
   }
 
-  .box1 {
-    text-align: center;
-    padding: 11% 0 11% 0;
+  .box-1 {
+    border-top-left-radius: 12px;
+    padding-top: 114%;
   }
 
-  .box2 {
-    text-align: center;
+  .box-2 {
+    border-top-right-radius: 12px;
+    padding-top: 55%;
     margin-bottom: 4%;
-    padding: 7% 0 7% 0;
-
-    img {
-      width: 58.6%;
-    }
   }
 
-  .box3 {
-    text-align: center;
-    padding: 7% 0 7% 0;
-
-    img {
-      width: 59%;
-    }
+  .box-3 {
+    padding-top: 55%;
   }
 
-  .box4 {
-    text-align: center;
-    padding: 6% 0 6% 0;
+  .box-4 {
+    padding-top: 45%;
   }
 
-  .box5 {
-    text-align: center;
-    padding: 18.5% 0 18.5% 0;
-
-    img {
-      width: 66%;
-    }
+  .box-5 {
+    border-bottom-left-radius: 12px;
+    padding-top: 70%;
   }
 
-  .box6 {
-    text-align: center;
-    padding: 10% 0 10% 0;
-    margin-bottom: 150px;
+  .box-6 {
+    border-bottom-right-radius: 12px;
+    padding-top: 70%;
   }
 
   .gutter {
     padding: 1%;
+  }
+
+  .gutter-box-2-3 {
+    padding: 0;
   }
 }
 

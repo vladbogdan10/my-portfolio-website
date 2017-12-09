@@ -1,0 +1,32 @@
+@mixin slide-right-speed($speed) {
+	-moz-animation: $speed ease-out 0s 1 slideInRight;
+	-webkit-animation: $speed ease-out 0s 1 slideInRight;
+	animation: $speed ease-out 0s 1 slideInRight;
+
+	@-moz-keyframes slideInRight {
+	  0% {
+	    transform: translateX(100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+
+	@-webkit-keyframes slideInRight {
+	  0% {
+	    transform: translateX(100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+
+	@keyframes slideInRight {
+	  0% {
+	    transform: translateX(100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+}

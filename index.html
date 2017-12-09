@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vlad B.</title>
     <link rel="stylesheet" href="css/bootstrap-grid12.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://use.fontawesome.com/e7fedb021e.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300" rel="stylesheet">
 </head>
 
 <body>
@@ -20,12 +20,11 @@
                     <div class="social-icons col-xs-3">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                         <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        <i class="fa fa-github" aria-hidden="true"></i>
                     </div>
                     <div class="logo col-xs-6"><img src="pictures/logo.png"></div>
-                    <div class="email col-xs-3">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="social-icons-2 col-xs-3">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-github" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="menu">
@@ -80,34 +79,37 @@
                 <h1>PORTFOLIO</h1>
                 <div class="row">
                     <div class="col-xs-6 gutter">
-                        <div class="box1 box">
-                            <img src="pictures/calculator-portrait.png" alt="">
-                        </div>
+                        <img src="pictures/calculator-portrait.png" alt="">
+                        <div class="box-1 box"></div>
                     </div>
                     <div class="col-xs-6 gutter">
-                        <div class="box2 box">
-                            <img src="pictures/random-quote.png" alt="">
+                        <div class="col-xs-12 gutter-box-2-3">
+                            <img class="portfolio-img-2" src="pictures/random-quote.png" alt="">
+                            <div class="box-2 box"></div>
                         </div>
-                        <div class="box3 box">
-                            <img src="pictures/twitch.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 gutter">
-                        <div class="box4 box">
-                            <img src="pictures/weather-app.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 gutter">
-                        <div class="box5 box">
-                            <img src="pictures/wikipedia.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 gutter">
-                        <div class="box6 box">
-                            <img src="pictures/elon.png" alt="">
+                        <div class="col-xs-12 gutter-box-2-3">
+                            <img class="portfolio-img-3" src="pictures/twitch.png" alt="">
+                            <div class="box-3 box"></div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12 gutter">
+                        <img src="pictures/weather-app.png" alt="">
+                        <div class="box-4 box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 gutter">
+                        <img class="portfolio-img-5" src="pictures/wikipedia.png" alt="">
+                        <div class="box-5 box"></div>
+                    </div>
+                    <div class="col-xs-6 gutter">
+                        <img class="portfolio-img-6" src="pictures/elon.png" alt="">
+                        <div class="box-6 box"></div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!-- /main -->
@@ -118,7 +120,7 @@
                 <p>Get in touch</p>
                 <h1>CONTACT</h1>
                 <div class="contact-form">
-                    <form>
+                    <form id="form">
                         <div class="row">
                             <div class="col-sm-6">
                                 <input class="js-input" type="text" name="name" required>
@@ -132,11 +134,9 @@
                                 <input class="js-input" type="subject" name="subject" required>
                                 <label for="name">Message</label>
                             </div>
-                            <div class="button">
-                                <input type="submit" value="SEND">
-                            </div>
                         </div>
                     </form>
+                    <button class="form-btn" type="submit" form="form" value="Submit"><i class="fa fa-paper-plane" aria-hidden="true"></i><span>SEND</span></button>
                 </div>
             </div>
         </div>
