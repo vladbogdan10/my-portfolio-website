@@ -91,6 +91,7 @@ nav .logo {
 }
 nav .logo img {
   width: 100%;
+  height: auto;
   max-width: 140px;
   margin-top: -20px;
 }
@@ -165,26 +166,32 @@ nav .menu ul {
 }
 .portfolio img {
   width: 42%;
+  height: auto;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.portfolio img:hover {
-  width: 46%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .portfolio .portfolio-img-2,
 .portfolio .portfolio-img-3,
-.portfolio .portfolio-img-5,
-.portfolio .portfolio-img-6 {
-  width: 62%;
+.portfolio .portfolio-img-5 {
+  width: 64%;
 }
 .portfolio .portfolio-img-6 {
-  width: 34%;
+  width: 36%;
 }
 .portfolio .box {
   background-color: #F1F1F1;
+  cursor: pointer;
+}
+.portfolio .box:hover img {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .portfolio .box-1 {
   border-top-left-radius: 12px;
