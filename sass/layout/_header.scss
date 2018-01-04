@@ -1,7 +1,7 @@
 @import 'helpers/slideinleft';
 @import 'helpers/slideinright';
 
-nav {
+.navbar {
   padding-top: 70px;
 
   .social-icons {
@@ -21,7 +21,7 @@ nav {
 
     &:hover {
       cursor: pointer;
-      text-shadow: 2px 2px 2px #CCCCCC;
+      text-shadow: 2px 2px 2px #DCDCDC;
       color: #FFCC66;
     }
   }
@@ -37,21 +37,48 @@ nav {
       margin-top: -20px;
     }
   }
+}
 
-  .menu {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 60px;
-    font-size: 18px;
-    font-weight: bold;
 
-    ul {
-      list-style-type: none;
-      color: #3D3D3D;
-      padding: 0;
-      margin: 0;
-    }
+.menu {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 18px;
+  font-weight: bold;
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: #363636;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    letter-spacing: 1px;
+  }
+
+  .effect-underline:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    width: 100%;
+    border-bottom: 2px solid #FFCC66;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+
+  .effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 

@@ -1,4 +1,4 @@
-.portfolio {
+#portfolio {
   margin-top: 8%;
   margin-bottom: 10%;
 
@@ -12,7 +12,6 @@
     position: absolute;
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
-    -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
   }
 
@@ -26,54 +25,97 @@
     width: 36%;
   }
 
-  .box {
-    background-color: #F1F1F1;
-    cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+}
 
-    &:hover {
-      img {
-        -moz-transform: scale(1.05);
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
+
+.box-layout {
+  background-color: #F1F1F1;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    img {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+
+    @media screen and (min-width: 992px) {
+      .text {
+        opacity: 1;
+        -webkit-transform: translateY(-40px);
+                transform: translateY(-40px);
+      }
+
+      .txt1 {
+        -webkit-transform: translateY(-18px);
+                transform: translateY(-18px);
+      }
+
+      .txt2 {
+        -webkit-transform: translateY(-18px);
+                transform: translateY(-18px);
+      }
+
+      .txt3 {
+        -webkit-transform: translateY(-24px);
+                transform: translateY(-24px);
       }
     }
   }
 
-  .box-1 {
-    border-top-left-radius: 12px;
-    padding-top: 114%;
-  }
-
-  .box-2 {
-    border-top-right-radius: 12px;
-    padding-top: 55%;
-    margin-bottom: 4%;
-  }
-
-  .box-3 {
-    padding-top: 55%;
-  }
-
-  .box-4 {
-    padding-top: 45%;
-  }
-
-  .box-5 {
-    border-bottom-left-radius: 12px;
-    padding-top: 70%;
-  }
-
-  .box-6 {
-    border-bottom-right-radius: 12px;
-    padding-top: 70%;
-  }
-
-  .gutter {
-    padding: 1%;
-  }
-
-  .gutter-box-2-3 {
-    padding: 0;
+  .text {
+    color: #6C6C6C;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 43%;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px -1px #999998;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
   }
 }
 
+.box-1 {
+  border-top-left-radius: 12px;
+  padding-top: 114%;
+}
+
+.box-2 {
+  border-top-right-radius: 12px;
+  padding-top: 55%;
+  margin-bottom: 4%;
+}
+
+.box-3 {
+  padding-top: 55%;
+}
+
+.box-4 {
+  padding-top: 45%;
+}
+
+.box-5 {
+  border-bottom-left-radius: 12px;
+  padding-top: 70%;
+}
+
+.box-6 {
+  border-bottom-right-radius: 12px;
+  padding-top: 70%;
+}
+
+.gutter {
+  padding: 1%;
+}
+
+.gutter-box-2-3 {
+  padding: 0;
+}
