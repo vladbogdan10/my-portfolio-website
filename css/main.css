@@ -152,7 +152,7 @@ body {
 }
 #about .about-me {
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 22px;
   color: #808080;
 }
@@ -161,7 +161,7 @@ body {
   max-width: 350px;
 }
 #about .about-me .span-style {
-  color: #4C4C4C;
+  color: #636363;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #about .about-me .middle-line {
@@ -171,14 +171,19 @@ body {
   margin: 0 auto;
 }
 #about .about-me p:nth-child(7) {
-  font-size: 18px;
+  font-size: 0.75em;
 }
 #about .about-me p:nth-child(8) {
   line-height: 50px;
-  font-size: 20px;
-  color: #4C4C4C;
+  font-size: 0.85em;
+  color: #636363;
   font-weight: bold;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 500px) {
+  #about .about-me {
+    font-size: 1.2em;
+  }
 }
 
 #portfolio {
