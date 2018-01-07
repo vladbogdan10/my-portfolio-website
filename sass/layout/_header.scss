@@ -4,24 +4,22 @@
 .navbar {
   padding-top: 70px;
 
-  .social-icons {
-    font-size: 20px;
+  .icons-left {
     @include slide-left-speed(0.4s);
   }
 
-  .social-icons-2 {
-    font-size: 20px;
+  .icons-right {
     text-align: right;
     @include slide-right-speed(0.4s);
   }
 
-  i {
+  .icon {
+    color: #000000;
+    font-size: 20px;
     -webkit-transition: all 0.1s ease;
     transition: all 0.1s ease;
 
     &:hover {
-      cursor: pointer;
-      text-shadow: 2px 2px 2px #DCDCDC;
       color: #FFCC66;
     }
   }
@@ -48,16 +46,22 @@
   font-size: 18px;
   font-weight: bold;
 
-  a {
+  .txt-btn {
     position: relative;
-    text-decoration: none;
     color: #363636;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
 
-  a:hover {
+  .txt-btn:hover {
     letter-spacing: 1px;
+  }
+
+  .txt-btn:active {
+    background-color: #FFCC66;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0 4px 0 4px;
   }
 
   .effect-underline:after {

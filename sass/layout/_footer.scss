@@ -1,6 +1,7 @@
 @import 'helpers/middle-line';
 
 #footer {
+  position: relative;
   background-color: #333366;
 
   .middle-line {
@@ -31,6 +32,8 @@
   margin-top: 80px;
   width: 90%;
   max-width: 700px;
+  margin-bottom: 135px;
+
 
   input {
     position: relative;
@@ -74,11 +77,10 @@
 
 
 .form-btn {
-  display: block;
-  margin: 0 auto;
+  position: absolute;
+  margin: auto;
+  right: 0; bottom: 50px; left: 0;
   cursor: pointer;
-  margin-top: 50px;
-  margin-bottom: 50px;
   border: none;
   background-color: #FFCC66;
   font-size: 18px;
@@ -86,18 +88,26 @@
   height: 36px;
   border-radius: 2px;
   letter-spacing: 2px;
+  
+  span {
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+  }
 
-  .fa-paper-plane {
-    display: none;
+  .icon-paper-plane {
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    opacity: 0;
   }
 
   &:hover {
-    span {
-      display: none;
+    .send {
+      opacity: 0;
     }
 
-    .fa-paper-plane {
-      display: inline-block;
+    .icon-paper-plane {
+      opacity: 1;
     }
   }
 }
@@ -112,14 +122,18 @@
     font-size: 14px;
   }
 
-  .social-icons {
-    color: #CCCEE8;
+  .icons-footer {
     text-align: right;
     font-size: 18px;
-    margin-top: 12px;
+    margin-top: 14px;
+    cursor: default;
 
-    i {
-      cursor: pointer;
+    .icons {
+      color: #CCCEE8;
+
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 }
