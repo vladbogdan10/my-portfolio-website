@@ -12,6 +12,11 @@ body {
   box-shadow: 0 0 26px -2px #CCCCCC;
 }
 
+a {
+  text-decoration: none;
+  color: #363636;
+}
+
 @import 'layout/header';
 @import 'layout/about';
 @import 'layout/portfolio';
