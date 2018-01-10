@@ -53,10 +53,6 @@
     transition: all 0.2s;
   }
 
-  .txt-btn:hover {
-    letter-spacing: 1px;
-  }
-
   .txt-btn:active {
     background-color: #FFCC66;
     border-top-left-radius: 8px;
@@ -64,7 +60,7 @@
     padding: 0 4px 0 4px;
   }
 
-  .effect-underline:after {
+  .txt-btn:before {
     content: '';
     position: absolute;
     left: 0;
@@ -79,7 +75,7 @@
     transform: scale(0,1);
   }
 
-  .effect-underline:hover:after {
+  .txt-btn:hover:before {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -91,7 +87,7 @@
   margin-top: 10%;
   width: 100%;
   height: 500px;
-  background: url(../pictures/header-image.png) no-repeat center center;
+  background: url(../images/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

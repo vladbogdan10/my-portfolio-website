@@ -113,16 +113,13 @@ a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.menu .txt-btn:hover {
-  letter-spacing: 1px;
-}
 .menu .txt-btn:active {
   background-color: #FFCC66;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 0 4px 0 4px;
 }
-.menu .effect-underline:after {
+.menu .txt-btn:before {
   content: '';
   position: absolute;
   left: 0;
@@ -136,7 +133,7 @@ a {
   -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
 }
-.menu .effect-underline:hover:after {
+.menu .txt-btn:hover:before {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -146,7 +143,7 @@ a {
   margin-top: 10%;
   width: 100%;
   height: 500px;
-  background: url(../pictures/header-image.png) no-repeat center center;
+  background: url(../images/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -202,7 +199,7 @@ a {
   color: #E6E6E6;
 }
 #portfolio img {
-  width: 42%;
+  width: 44%;
   height: auto;
   position: absolute;
   margin: auto;
@@ -215,7 +212,7 @@ a {
 #portfolio .portfolio-img-2,
 #portfolio .portfolio-img-3,
 #portfolio .portfolio-img-5 {
-  width: 64%;
+  width: 62%;
 }
 #portfolio .portfolio-img-6 {
   width: 36%;
@@ -225,36 +222,13 @@ a {
   background-color: #F1F1F1;
   position: relative;
 }
-.box-layout:hover img {
-  -webkit-transform: scale(0.95);
-  transform: scale(0.95);
-}
-@media screen and (min-width: 992px) {
-  .box-layout:hover .text {
-    opacity: 1;
-    -webkit-transform: translateY(-40px);
-    transform: translateY(-40px);
-  }
-  .box-layout:hover .txt1 {
-    -webkit-transform: translateY(-18px);
-    transform: translateY(-18px);
-  }
-  .box-layout:hover .txt2 {
-    -webkit-transform: translateY(-18px);
-    transform: translateY(-18px);
-  }
-  .box-layout:hover .txt3 {
-    -webkit-transform: translateY(-24px);
-    transform: translateY(-24px);
-  }
-}
 .box-layout .text {
   color: #6C6C6C;
   position: absolute;
+  margin: auto;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
   width: 43%;
   background-color: white;
   text-align: center;
@@ -262,6 +236,17 @@ a {
   box-shadow: inset 0 0 3px -1px #999998;
   opacity: 0;
   transition: all 0.1s ease-in-out;
+}
+.box-layout:hover img {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+}
+@media screen and (min-width: 992px) {
+  .box-layout:hover .text {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
 }
 
 .box-1 {

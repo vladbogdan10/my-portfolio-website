@@ -7,7 +7,7 @@
   }
 
   img {
-    width: 42%;
+    width: 44%;
     height: auto;
     position: absolute;
     margin: auto;
@@ -18,7 +18,7 @@
   .portfolio-img-2,
   .portfolio-img-3,
   .portfolio-img-5 {
-    width: 64%;
+    width: 62%;
   }
 
   .portfolio-img-6 {
@@ -31,43 +31,11 @@
   background-color: #F1F1F1;
   position: relative;
 
-  &:hover {
-    img {
-      -webkit-transform: scale(0.95);
-      transform: scale(0.95);
-    }
-
-    @media screen and (min-width: 992px) {
-      .text {
-        opacity: 1;
-        -webkit-transform: translateY(-40px);
-                transform: translateY(-40px);
-      }
-
-      .txt1 {
-        -webkit-transform: translateY(-18px);
-                transform: translateY(-18px);
-      }
-
-      .txt2 {
-        -webkit-transform: translateY(-18px);
-                transform: translateY(-18px);
-      }
-
-      .txt3 {
-        -webkit-transform: translateY(-24px);
-                transform: translateY(-24px);
-      }
-    }
-  }
-
   .text {
     color: #6C6C6C;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    margin: auto;
+    right: 0; bottom: 0; left: 0;
     width: 43%;
     background-color: white;
     text-align: center;
@@ -75,6 +43,21 @@
     box-shadow: inset 0 0 3px -1px #999998;
     opacity: 0;
     transition: all 0.1s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      -webkit-transform: scale(0.97);
+      transform: scale(0.97);
+    }
+
+    @media screen and (min-width: 992px) {
+      .text {
+        opacity: 1;
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+      }
+    }
   }
 }
 
