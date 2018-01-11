@@ -4,13 +4,8 @@
 .navbar {
   padding-top: 70px;
 
-  .icons-left {
-    @include slide-left-speed(0.4s);
-  }
-
   .icons-right {
     text-align: right;
-    @include slide-right-speed(0.4s);
   }
 
   .icon {
@@ -60,7 +55,7 @@
     padding: 0 4px 0 4px;
   }
 
-  .txt-btn:before {
+  .txt-btn::before {
     content: '';
     position: absolute;
     left: 0;
@@ -75,7 +70,7 @@
     transform: scale(0,1);
   }
 
-  .txt-btn:hover:before {
+  .txt-btn:hover::before {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
