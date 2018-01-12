@@ -110,8 +110,8 @@ a {
   max-width: 350px;
 }
 #about .about-me .span-style {
-  color: #636363;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #5C5C5C;
+  font-weight: bold;
 }
 #about .about-me .middle-line {
   width: 1px;
@@ -256,14 +256,14 @@ a {
   letter-spacing: 2px;
 }
 
-.contact-form {
+.form-wrapper {
   margin: 0 auto;
   margin-top: 80px;
   width: 90%;
   max-width: 700px;
   margin-bottom: 135px;
 }
-.contact-form input {
+.form-wrapper input {
   position: relative;
   font-size: 16px;
   color: #FFFFFF;
@@ -274,18 +274,18 @@ a {
   background-color: #333366;
   border-bottom: 2px solid #FFCC66;
 }
-.contact-form input:focus {
+.form-wrapper input:focus {
   outline: none;
 }
-.contact-form input:focus + label, .contact-form input.not-empty + label {
+.form-wrapper input:focus + label, .form-wrapper input.not-empty + label {
   -webkit-transform: translateY(-22px);
   transform: translateY(-22px);
 }
-.contact-form #subject {
+.form-wrapper #message {
   padding-top: 60px;
   font-size: 14px;
 }
-.contact-form label {
+.form-wrapper label {
   position: absolute;
   left: 15px;
   bottom: 36px;
