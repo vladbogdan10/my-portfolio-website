@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>vladbogdan</title>
+  <meta property="og:title" content="Portfolio Website"/>
+  <meta property="og:description" content="Web Developer and Designer"/>
+  <meta property="og:image" content="http://www.vladbogdan.com/images/website-thumbnail.jpg"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Website thumbnail"/>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/bootstrap-grid12-min.css" type="text/css">
   <link rel="stylesheet" href="css/icomoon-icons.css">
@@ -152,8 +159,8 @@
         <div class="middle-line"></div>
         <p>Get in touch</p>
         <h1>CONTACT</h1>
-        <div class="contact-form">
-          <form id="form">
+        <div class="form-wrapper">
+          <form id="contact-form">
             <div class="row">
               <div class="col-sm-6">
                 <input class="js-input" type="text" id="name" name="name" required>
@@ -164,12 +171,12 @@
                 <label for="email">Email</label>
               </div>
               <div class="col-xs-12">
-                <input class="js-input" type="text" id="subject" name="subject">
-                <label for="subject">Message</label>
+                <input class="js-input" type="text" id="message" name="message" required>
+                <label for="message">Message</label>
               </div>
             </div>
           </form>
-          <button class="form-btn" type="submit" form="form" value="Submit">
+          <button class="form-btn" type="submit" form="contact-form" value="Submit">
             <span class="send">SEND</span>
             <span class="icon-paper-plane"></span>
           </button>
@@ -178,7 +185,7 @@
     </div>
     <div class="footer-bottom">
       <div class="col-xs-6">
-        <p>&copy; 2017 Vlad Bogdan</p>
+        <p>&copy; 2018 Vlad Bogdan</p>
       </div>
       <div class="col-xs-6 icons-footer">
         <a href="https://facebook.com/vladb90" target="_blank">
