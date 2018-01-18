@@ -24,9 +24,8 @@
     text-align: center;
 
     img {
-      width: 100%;
-      height: auto;
       max-width: 140px;
+      height: auto;
       margin-top: -20px;
     }
   }
@@ -80,11 +79,21 @@
 
 .header-img {
   margin-top: 10%;
-  width: 100%;
   height: 500px;
-  background: url(../images/header-image.png) no-repeat center center;
+  background: url(./images/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+  .header-img {
+    background: url(./images/header-image-phone.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .icon {
+    display: none;
+  }
 }
