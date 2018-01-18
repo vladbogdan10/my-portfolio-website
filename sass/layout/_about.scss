@@ -1,7 +1,10 @@
 @import 'helpers/middle-line';
 
 #about {
+margin-bottom: 12%;
+
   h1 {
+    position: relative;
   	text-align: right;
   	color: #E6E6E6;
     margin-bottom: 50px;
@@ -31,12 +34,29 @@
       font-size: 0.75em;
     }
 
-    p:nth-child(8) {
+    /*p:nth-child(8) {
       line-height: 50px;
       font-size: 0.85em;
       color: #636363;
       font-weight: bold;
       letter-spacing: 1px;
+    }*/
+  }
+
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .brands {
+      font-size: 1.5em;
+      opacity: 0.6;
+      -webkit-transition: all 0.1s ease;
+      transition: all 0.1s ease;
+      
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

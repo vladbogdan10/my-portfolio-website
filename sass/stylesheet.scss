@@ -17,6 +17,8 @@ a {
   color: #363636;
 }
 
+@import 'layout/grid12';
+@import 'helpers/font-icons';
 @import 'layout/header';
 @import 'layout/about';
 @import 'layout/portfolio';

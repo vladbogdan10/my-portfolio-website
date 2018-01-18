@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?j9xodc');
+  src:  url('./fonts/icomoon.eot?j9xodc#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?j9xodc') format('truetype'),
+    url('./fonts/icomoon.woff?j9xodc') format('woff'),
+    url('./fonts/icomoon.svg?j9xodc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.brands {
+  position: relative;
+  padding: 10px;
+}
+
+.icon-ajax:before {
+  content: "\e90a";
+  color: #4789c1;
+}
+.icon-ajax:after {
+  content: "Ajax";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-responsive-design:before {
+  content: "\e908";
+  color: #139FD8;
+}
+.icon-responsive-design:after {
+  content: "RWD";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-photoshop:before {
+  content: "\e909";
+  color: #180077;
+}
+.icon-photoshop:after {
+  content: "Photoshop";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-jquery:before {
+  content: "\e907";
+  color: #0953AC;
+}
+.icon-jquery:after {
+  content: "jQuery";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-git:before {
+  content: "\e906";
+  color: #f14e32;
+}
+.icon-git:after {
+  content: "Git";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-bootstrap:before {
+  content: "\e904";
+  color: #563d7c;
+}
+.icon-bootstrap:after {
+  content: "Bootstrap";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-sass:before {
+  content: "\e905";
+  color: #c69;
+}
+.icon-sass:after {
+  content: "Sass";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-css:before {
+  content: "\e903";
+  color: #f43059;
+}
+.icon-css:after {
+  content: "CSS";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-html5:before {
+  content: "\e902";
+  color: #e34f26;
+}
+.icon-html5:after {
+  content: "HTML5";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-javascript:before {
+  content: "\e901";
+  color: #f7df1e;
+}
+.icon-javascript:after {
+  content: "JavaScript";
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.3em;
+  bottom: -8px; right: 0; left: 0;
+  color: black;
+}
+.icon-paper-plane:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
