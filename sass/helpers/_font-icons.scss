@@ -11,6 +11,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
+  position: relative;
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -24,9 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.brands {
-  position: relative;
-  padding: 10px;
+[class^="icon-"]:after, [class*=" icon-"]:after {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 0.32em;
+  bottom: -0.8em; right: 0; left: 0;
+  color: black;
 }
 
 .icon-ajax:before {
@@ -35,11 +39,6 @@
 }
 .icon-ajax:after {
   content: "Ajax";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-responsive-design:before {
   content: "\e908";
@@ -47,11 +46,6 @@
 }
 .icon-responsive-design:after {
   content: "RWD";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-photoshop:before {
   content: "\e909";
@@ -59,11 +53,6 @@
 }
 .icon-photoshop:after {
   content: "Photoshop";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-jquery:before {
   content: "\e907";
@@ -71,11 +60,6 @@
 }
 .icon-jquery:after {
   content: "jQuery";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-git:before {
   content: "\e906";
@@ -83,11 +67,6 @@
 }
 .icon-git:after {
   content: "Git";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-bootstrap:before {
   content: "\e904";
@@ -95,11 +74,6 @@
 }
 .icon-bootstrap:after {
   content: "Bootstrap";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-sass:before {
   content: "\e905";
@@ -107,11 +81,6 @@
 }
 .icon-sass:after {
   content: "Sass";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-css:before {
   content: "\e903";
@@ -119,11 +88,6 @@
 }
 .icon-css:after {
   content: "CSS";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-html5:before {
   content: "\e902";
@@ -131,11 +95,6 @@
 }
 .icon-html5:after {
   content: "HTML5";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-javascript:before {
   content: "\e901";
@@ -143,11 +102,6 @@
 }
 .icon-javascript:after {
   content: "JavaScript";
-  position: absolute;
-  font-family: Arial, sans-serif;
-  font-size: 0.3em;
-  bottom: -8px; right: 0; left: 0;
-  color: black;
 }
 .icon-paper-plane:before {
   content: "\e900";

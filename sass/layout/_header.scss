@@ -8,7 +8,7 @@
     text-align: right;
   }
 
-  .icon {
+  .navbar-icons {
     color: #000000;
     font-size: 20px;
     -webkit-transition: all 0.1s ease;
@@ -38,11 +38,10 @@
   margin: 0 auto;
   margin-bottom: 60px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
 
   .txt-btn {
     position: relative;
-    color: #363636;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
@@ -79,7 +78,7 @@
 
 .header-img {
   margin-top: 10%;
-  height: 500px;
+  height: 530px;
   background: url(./images/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -93,7 +92,7 @@
     background-size: cover;
   }
 
-  .icon {
+  .navbar-icons {
     display: none;
   }
 }

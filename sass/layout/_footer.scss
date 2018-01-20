@@ -1,32 +1,39 @@
 @import 'helpers/middle-line';
+$dark-yellow: #FFCC66;
+$footer-main: #333366;
 
 #footer {
-  position: relative;
-  background-color: #333366;
-
-  .middle-line {
-    @include middle-line(50px, #FFCC66);
-    margin-top: 20px;
-  }
+  background-color: $footer-main;
 
   .footer-heading {
     position: relative;
-    max-width: 182px;
+    width: 180px;
     margin: 0 auto;
-    top: -28px;
+    top: 40px;
+    padding-bottom: 50px;
 
     h1 {
       color: #FFFFFF;
-      font-size: 2.32em;
+      font-size: 2.3em;
       letter-spacing: 2px;
+      font-weight: 500;
     }
 
     p {
       position: absolute;
-      color: #FFCC66;
+      color: $dark-yellow;
       font-size: 1em;
       right: 0;
       top: -28px;
+    }
+
+    p:before {
+      content: '';
+      position: absolute;
+      border-left: 1px solid;
+      height: 50px;
+      left: -4px; right: 0;
+      bottom: 4px;
     }
   }
 }
@@ -34,22 +41,21 @@
 
 .form-wrapper {
   margin: 0 auto;
+  text-align: center;
   width: 90%;
   max-width: 700px;
   margin-top: 50px;
-  margin-bottom: 135px;
-
 
   input {
     position: relative;
     font-size: 16px;
     color: #FFFFFF;
     width: 100%;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     border: none;
-    line-height: 36px;
-    background-color: #333366;
-    border-bottom: 2px solid #FFCC66;
+    line-height: 2;
+    background-color: $footer-main;
+    border-bottom: 2px solid $dark-yellow;
 
     &:focus {
       outline: none;
@@ -58,14 +64,14 @@
     &:focus,
     &.not-empty {
       + label {
-        -webkit-transform: translateY(-22px);
-        transform: translateY(-22px);
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
       }
     }
   }
 
   #message {
-    padding-top: 60px;
+    margin-top: 70px;
     font-size: 14px;
   }
 
@@ -73,7 +79,7 @@
     position: absolute;
     left: 15px;
     bottom: 36px;
-    color: #FFCC66;
+    color: $dark-yellow;
     cursor: text;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -82,17 +88,16 @@
 
 
 .form-btn {
-  position: absolute;
-  margin: auto;
-  right: 0; bottom: 50px; left: 0;
+  position: relative;
   cursor: pointer;
   border: none;
-  background-color: #FFCC66;
+  background-color: $dark-yellow;
   font-size: 18px;
   width: 130px;
   height: 36px;
   border-radius: 2px;
   letter-spacing: 2px;
+  margin: 46px 0;
   
   span {
     -webkit-transition: all 0.1s ease;
@@ -119,26 +124,29 @@
 
 
 .footer-bottom {
-  height: 48px;
+  position: relative;
+  height: 50px;
   background-color: #000000;
 
   p {
+    height: 18px;
+    position: absolute;
+    margin: auto;
+    left: 14px; top: 0; bottom: 0;
     color: #CCCEE8;
     font-size: 14px;
   }
 
-  .icons-footer {
-    text-align: right;
-    font-size: 18px;
-    margin-top: 14px;
-    cursor: default;
+  .footer-icons {
+    position: absolute;
+    height: 22px;
+    margin: auto;
+    right: 14px; top: 0; bottom: 0;
+    font-size: 20px;
 
-    .icons {
+    a {
       color: #CCCEE8;
-
-      &:active {
-        opacity: 0.5;
-      }
+      margin-left: 4px;
     }
   }
 }
