@@ -1,4 +1,7 @@
 #portfolio {
+  width: 96%;
+  max-width: 1120px;
+  margin: 0 auto;
   margin-bottom: 10%;
 
   h1 {
@@ -33,7 +36,12 @@
 
 
 .box-layout {
-  background-color: #F7F7F7;
+  width: 48%;
+  display: inline-block;
+}
+
+.box {
+  background-color: #F6F6F6;
   position: relative;
 
   .text {
@@ -67,12 +75,12 @@
 }
 
 .box-1 {
-  border-top-left-radius: 12px;
+  border-top-left-radius: 10px;
   padding-top: 114%;
 }
 
 .box-2 {
-  border-top-right-radius: 12px;
+  border-top-right-radius: 10px;
   padding-top: 55%;
   margin-bottom: 4%;
 }
@@ -86,19 +94,15 @@
 }
 
 .box-5 {
-  border-bottom-left-radius: 12px;
+  border-bottom-left-radius: 10px;
   padding-top: 70%;
 }
 
 .box-6 {
-  border-bottom-right-radius: 12px;
+  border-bottom-right-radius: 10px;
   padding-top: 70%;
 }
 
 .gutter {
-  padding: 1%;
-}
-
-.gutter-box-2-3 {
-  padding: 0;
+  padding: 0.7%;
 }
