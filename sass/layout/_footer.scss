@@ -9,7 +9,7 @@ $footer-main: #333366;
     position: relative;
     width: 180px;
     margin: 0 auto;
-    top: 40px;
+    top: 66px;
     padding-bottom: 50px;
 
     h1 {
@@ -38,20 +38,22 @@ $footer-main: #333366;
   }
 }
 
-
 .form-wrapper {
   margin: 0 auto;
   text-align: center;
   width: 90%;
   max-width: 700px;
-  margin-top: 50px;
+  padding: 50px 0;
+
+  div {
+    position: relative;
+    margin-bottom: 22px;
+  }
 
   input {
-    position: relative;
     font-size: 16px;
     color: #FFFFFF;
     width: 100%;
-    margin-bottom: 24px;
     border: none;
     line-height: 2;
     background-color: $footer-main;
@@ -71,14 +73,13 @@ $footer-main: #333366;
   }
 
   #message {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 14px;
   }
 
   label {
     position: absolute;
-    left: 15px;
-    bottom: 36px;
+    left: 0; bottom: 14px;
     color: $dark-yellow;
     cursor: text;
     -webkit-transition: all .2s ease-in-out;
@@ -97,7 +98,7 @@ $footer-main: #333366;
   height: 36px;
   border-radius: 2px;
   letter-spacing: 2px;
-  margin: 46px 0;
+  margin-top: 50px;
   
   span {
     -webkit-transition: all 0.1s ease;

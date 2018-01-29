@@ -1,16 +1,25 @@
-@import 'helpers/slideinleft';
-@import 'helpers/slideinright';
-
 .navbar {
-  padding-top: 70px;
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-size: 0;
 
-  .icons-right {
+  .left-icons,
+  .logo,
+  .right-icons {
+    display: inline-block;
+    width: 33.3%;
+  }
+
+  .right-icons {
     text-align: right;
   }
 
-  .navbar-icons {
+  .icon {
     color: #000000;
     font-size: 20px;
+    padding: 2px;
     -webkit-transition: all 0.1s ease;
     transition: all 0.1s ease;
 
@@ -20,40 +29,45 @@
   }
 
   .logo {
-    margin-bottom: 90px;
     text-align: center;
+    margin-bottom: 110px;
 
     img {
+      width: 100%;
       max-width: 140px;
       height: auto;
-      margin-top: -20px;
+      margin-bottom: -20px;
     }
   }
 }
 
 
 .menu {
-  text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 60px;
-  font-size: 18px;
+  text-align: center;
   font-weight: 500;
 
-  .txt-btn {
+  a {
+    display: inline-block;
+    width: 33.3%;
+  }
+
+  span {
     position: relative;
+    font-size: 18px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
 
-  .txt-btn:active {
+  span:active {
     background-color: #FFCC66;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0 4px 0 4px;
   }
 
-  .txt-btn::before {
+  span::before {
     content: '';
     position: absolute;
     left: 0;
@@ -68,7 +82,7 @@
     transform: scale(0,1);
   }
 
-  .txt-btn:hover::before {
+  span:hover::before {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -87,12 +101,20 @@
 }
 
 @media screen and (max-width: 500px) {
+  .navbar {
+    padding-top: 20px;
+
+      .logo {
+        margin-bottom: 120px;
+
+      img {
+        margin-bottom: -70px;
+      }
+    }
+  }
+
   .header-img {
     background: url(./images/header-image-phone.png) no-repeat center center;
     background-size: cover;
-  }
-
-  .navbar-icons {
-    display: none;
   }
 }

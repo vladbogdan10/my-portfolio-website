@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
   background-color: #F0F0F0;
 }
@@ -17,7 +21,6 @@ a {
   color: #464646;
 }
 
-@import 'layout/grid12';
 @import 'helpers/font-icons';
 @import 'layout/header';
 @import 'layout/about';

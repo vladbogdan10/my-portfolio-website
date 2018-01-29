@@ -1,8 +1,13 @@
 #portfolio {
+  width: 96%;
+  max-width: 1120px;
+  margin: 0 auto;
   margin-bottom: 10%;
+  font-size: 0;
 
   h1 {
     color: #E6E6E6;
+    font-size: 24px;
   }
 
   img {
@@ -33,11 +38,22 @@
 
 
 .box-layout {
-  background-color: #F7F7F7;
+  width: 50%;
+  display: inline-block;
+  padding: 0.7%;
+}
+
+.middle {
+  width: 100%;
+}
+
+.box {
+  background-color: #F6F6F6;
   position: relative;
 
   .text {
     color: #6C6C6C;
+    font-size: 16px;
     position: absolute;
     margin: auto;
     right: 0; bottom: 0; left: 0;
@@ -56,7 +72,7 @@
       transform: scale(0.97);
     }
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 900px) {
       .text {
         opacity: 1;
         -webkit-transform: translateY(-20px);
@@ -67,18 +83,18 @@
 }
 
 .box-1 {
-  border-top-left-radius: 12px;
+  border-top-left-radius: 10px;
   padding-top: 114%;
 }
 
 .box-2 {
-  border-top-right-radius: 12px;
-  padding-top: 55%;
-  margin-bottom: 4%;
+  border-top-right-radius: 10px;
+  padding-top: 55.6%;
+  margin-bottom: 2.8%;
 }
 
 .box-3 {
-  padding-top: 55%;
+  padding-top: 55.6%;
 }
 
 .box-4 {
@@ -86,19 +102,11 @@
 }
 
 .box-5 {
-  border-bottom-left-radius: 12px;
+  border-bottom-left-radius: 10px;
   padding-top: 70%;
 }
 
 .box-6 {
-  border-bottom-right-radius: 12px;
+  border-bottom-right-radius: 10px;
   padding-top: 70%;
-}
-
-.gutter {
-  padding: 1%;
-}
-
-.gutter-box-2-3 {
-  padding: 0;
 }
