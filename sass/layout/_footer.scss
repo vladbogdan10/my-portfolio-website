@@ -40,12 +40,35 @@ $footer-main: #333366;
 
 .form-wrapper {
   margin: 0 auto;
-  text-align: center;
-  width: 90%;
+  width: 85%;
   max-width: 700px;
   padding: 50px 0;
 
-  div {
+  .input-name,
+  .input-email {
+    display: inline-block;
+    width: 47%;
+  }
+
+  .input-email {
+    float: right;
+  }
+
+  @media screen and (max-width: 768px) {
+    .input-name,
+    .input-email {
+      display: block;
+      width: 100%;
+    }
+
+    .input-email {
+      float: none;
+    }
+  }
+
+  .input-name,
+  .input-email,
+  .input-message {
     position: relative;
     margin-bottom: 22px;
   }
@@ -88,37 +111,41 @@ $footer-main: #333366;
 }
 
 
-.form-btn {
-  position: relative;
-  cursor: pointer;
-  border: none;
-  background-color: $dark-yellow;
-  font-size: 18px;
-  width: 130px;
-  height: 36px;
-  border-radius: 2px;
-  letter-spacing: 2px;
-  margin-top: 50px;
-  
-  span {
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-  }
+.button {
+  text-align: center;
 
-  .icon-paper-plane {
-    position: absolute;
-    margin: auto;
-    left: 0; right: 0;
-    opacity: 0;
-  }
-
-  &:hover {
-    .send {
-      opacity: 0;
+  .form-btn {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: $dark-yellow;
+    font-size: 18px;
+    width: 130px;
+    height: 36px;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    
+    span {
+      -webkit-transition: all 0.1s ease;
+      transition: all 0.1s ease;
     }
 
     .icon-paper-plane {
-      opacity: 1;
+      position: absolute;
+      margin: auto;
+      left: 0; right: 0;
+      opacity: 0;
+    }
+
+    &:hover {
+      .send {
+        opacity: 0;
+      }
+
+      .icon-paper-plane {
+        opacity: 1;
+      }
     }
   }
 }
