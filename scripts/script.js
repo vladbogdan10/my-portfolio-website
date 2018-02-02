@@ -16,12 +16,16 @@ window.addEventListener("load", function () {
     var XHR = new XMLHttpRequest();
     var FD = new FormData(form);
     XHR.addEventListener("load", function(event) {
-      alert("Thanks for being awesome! I will respond as soon as possible.");
+      if (event.target.responseText === "1") {
+        alert("Thanks for being awesome! I will respond as soon as possible.");
+      } else {
+        alert("Oups! Something went wrong. Please try again.");
+      }
       form.reset();
     });
 
     XHR.addEventListener("error", function(event) {
-      alert('Oups! Something was wrong. Try again.');
+      alert('Something went wrong. Please check your internet connection and try again.');
     });
 
     XHR.open("POST", "http://vladbogdan.com/form_submit.php");
