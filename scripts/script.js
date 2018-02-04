@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
     var FD = new FormData(form);
     XHR.addEventListener("load", function(event) {
       if (event.target.responseText === "1") {
-        alert("Thanks for being awesome! I will respond as soon as possible.");
+        alert("Thanks for being awesome! I will get back to you as soon as possible.");
       } else {
         alert("Oups! Something went wrong. Please try again.");
       }
