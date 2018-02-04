@@ -1,17 +1,18 @@
 // Keep form label up if not empty.
 var inputs = document.querySelectorAll('.js-input');
-inputs.forEach(function(el) {
-  el.addEventListener('keyup', function() {
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('keyup', function() {
     if(this.value) {
       this.classList.add('not-empty');
     } else {
       this.classList.remove('not-empty');
     }
   });
-});
+};
 
 // Form submit.
 window.addEventListener("load", function () {
+  var form = document.getElementById("contact-form");
   function sendData() {
     var XHR = new XMLHttpRequest();
     var FD = new FormData(form);
@@ -31,8 +32,7 @@ window.addEventListener("load", function () {
     XHR.open("POST", "http://vladbogdan.com/form_submit.php");
     XHR.send(FD);
   }
- 
-  var form = document.getElementById("contact-form");
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     sendData();
