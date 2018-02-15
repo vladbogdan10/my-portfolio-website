@@ -1,3 +1,6 @@
+@import 'helpers/slideinleft';
+@import 'helpers/slideinright';
+
 .navbar {
   padding-top: 50px;
   font-size: 0;
@@ -9,8 +12,13 @@
     width: 33.3%;
   }
 
+  .left-icons {
+    @include slide-left-speed(0.5s);
+  }
+
   .right-icons {
     text-align: right;
+    @include slide-right-speed(0.5s);
   }
 
   .icon {
