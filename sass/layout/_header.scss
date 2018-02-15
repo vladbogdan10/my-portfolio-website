@@ -1,7 +1,4 @@
 .navbar {
-  width: 96%;
-  max-width: 1120px;
-  margin: 0 auto;
   padding-top: 50px;
   font-size: 0;
 
@@ -48,7 +45,7 @@
   text-align: center;
   font-weight: 500;
 
-  a {
+  div {
     display: inline-block;
     width: 33.3%;
   }
@@ -91,8 +88,10 @@
 
 
 .header-img {
+  max-width: 1680px;
+  margin: 0 auto;
   margin-top: 10%;
-  height: 530px;
+  height: 580px;
   background: url(./images/header-image.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

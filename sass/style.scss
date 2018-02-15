@@ -1,21 +1,19 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html {
-  background-color: #F0F0F0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Quicksand', sans-serif;
-  width: 100%;
-  max-width: 1440px;
-  background-color: #FFFFFF;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  box-shadow: 0 0 26px -2px #CCCCCC;
+}
+
+.navbar, #about, #portfolio {
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 96%;
 }
 
 a {
