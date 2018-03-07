@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('./fonts/icomoon.eot?j9xodc');
-  src:  url('./fonts/icomoon.eot?j9xodc#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon.ttf?j9xodc') format('truetype'),
-    url('./fonts/icomoon.woff?j9xodc') format('woff'),
-    url('./fonts/icomoon.svg?j9xodc#icomoon') format('svg');
+  src:  url('./fonts/icomoon.eot?fehku0');
+  src:  url('./fonts/icomoon.eot?fehku0#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?fehku0') format('truetype'),
+    url('./fonts/icomoon.woff?fehku0') format('woff'),
+    url('./fonts/icomoon.svg?fehku0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,77 +34,105 @@
 }
 
 .icon-ajax:before {
-  content: "\e90a";
+  content: "\e903";
   color: #4789c1;
 }
 .icon-ajax:after {
   content: "Ajax";
 }
 .icon-responsive-design:before {
-  content: "\e908";
-  color: #139FD8;
+  content: "\e902";
+  color: #3821ce;
 }
 .icon-responsive-design:after {
   content: "RWD";
 }
-.icon-photoshop:before {
-  content: "\e909";
-  color: #180077;
+.icon-adobephotoshop:before {
+  content: "\e904";
+  color: #00c8ff;
 }
-.icon-photoshop:after {
+.icon-adobephotoshop:after {
   content: "Photoshop";
 }
 .icon-jquery:before {
-  content: "\e907";
-  color: #0953AC;
+  content: "\e909";
+  color: #0769ad;
 }
 .icon-jquery:after {
   content: "jQuery";
 }
 .icon-git:before {
-  content: "\e906";
+  content: "\e905";
   color: #f14e32;
 }
 .icon-git:after {
   content: "Git";
 }
 .icon-bootstrap:before {
-  content: "\e904";
+  content: "\e906";
   color: #563d7c;
 }
 .icon-bootstrap:after {
   content: "Bootstrap";
 }
 .icon-sass:before {
-  content: "\e905";
+  content: "\e908";
   color: #c69;
 }
 .icon-sass:after {
   content: "Sass";
 }
 .icon-css:before {
-  content: "\e903";
+  content: "\e901";
   color: #f43059;
 }
 .icon-css:after {
   content: "CSS";
 }
 .icon-html5:before {
-  content: "\e902";
+  content: "\e900";
   color: #e34f26;
 }
 .icon-html5:after {
   content: "HTML5";
 }
 .icon-javascript:before {
-  content: "\e901";
+  content: "\e90a";
   color: #f7df1e;
 }
 .icon-javascript:after {
   content: "JavaScript";
 }
+.icon-gulp:before {
+  content: "\e907";
+  color: #da4648;
+}
+.icon-gulp:after {
+  content: "Gulp";
+}
+.icon-wordpress:before {
+  content: "\eab4";
+  color: #21759b;
+}
+.icon-wordpress:after {
+  content: "WordPress"
+}
+.icon-php:before {
+  content: "\e90d";
+  color: #777bb4;
+}
+.icon-php:after {
+  content: "PHP"
+}
+.icon-mysql:before {
+  content: "\e90c";
+  color: #4479a1;
+}
+.icon-mysql:after {
+  content: "MySQL"
+}
 .icon-paper-plane:before {
-  content: "\e900";
+  content: "\e90b";
 }
 .icon-facebook:before {
   content: "\ea90";
