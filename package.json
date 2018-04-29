@@ -1,0 +1,27 @@
+{
+  "name": "my-portfolio-website",
+  "version": "1.0.1",
+  "description": "Update To Flexbox",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladbogdan10/my-portfolio-website.git"
+  },
+  "author": "Vlad Bogdan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladbogdan10/my-portfolio-website/issues"
+  },
+  "homepage": "https://github.com/vladbogdan10/my-portfolio-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {}
+}
