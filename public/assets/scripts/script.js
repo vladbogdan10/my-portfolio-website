@@ -8,7 +8,7 @@ for (var i = 0; i < inputs.length; i++) {
       this.classList.remove('not-empty');
     }
   });
-};
+}
 
 // Form submit.
 window.addEventListener("load", function () {
