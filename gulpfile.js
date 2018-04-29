@@ -13,7 +13,7 @@ var sassOptions = {
 };
 
 var autoprefixerOptions = {
-  browsers: ['last 2 versions', '> 5%']
+  browsers: ['last 2 versions']
 };
 
 // Compile sass into CSS & auto-inject into browsers
