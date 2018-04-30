@@ -174,7 +174,7 @@ a {
 }
 
 .icon-wordpress:after {
-  content: "WordPress";
+  content: "WP";
 }
 
 .icon-php:before {
@@ -388,7 +388,7 @@ a {
     margin-bottom: -70px;
   }
   .header-img {
-    background: url(./images/header-image-phone.png) no-repeat center center;
+    background: url(../images/header-image-phone.png) no-repeat center center;
     background-size: cover;
   }
 }
@@ -432,15 +432,21 @@ a {
 }
 
 #about .skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 1.5em;
-  line-height: 1.7;
+}
+
+#about .skills-icons span {
   padding: 10px;
-  opacity: 0.7;
+  opacity: 0.8;
+  line-height: 1.5;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
-#about .skills-icons:hover {
+#about .skills-icons span:hover {
   opacity: 1;
 }
 
