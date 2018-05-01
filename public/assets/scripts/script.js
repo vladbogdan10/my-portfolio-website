@@ -1,3 +1,4 @@
+'use strict';
 // Keep form label up if not empty.
 var inputs = document.querySelectorAll('.js-input');
 for (var i = 0; i < inputs.length; i++) {
@@ -11,29 +12,29 @@ for (var i = 0; i < inputs.length; i++) {
 }
 
 // Form submit.
-window.addEventListener("load", function () {
-  var form = document.getElementById("contact-form");
+window.addEventListener('load', function () {
+  var form = document.getElementById('contact-form');
   function sendData() {
     var XHR = new XMLHttpRequest();
     var FD = new FormData(form);
-    XHR.addEventListener("load", function(event) {
-      if (event.target.responseText === "1") {
-        alert("Thanks for being awesome! I will get back to you as soon as possible.");
+    XHR.addEventListener('load', function(event) {
+      if (event.target.responseText === '1') {
+        window.alert('Thanks for being awesome! I will get back to you as soon as possible.');
       } else {
-        alert("Oups! Something went wrong. Please try again.");
+        window.alert('Oups! Something went wrong. Please try again.');
       }
       form.reset();
     });
 
-    XHR.addEventListener("error", function(event) {
-      alert('Something went wrong. Please check your internet connection and try again.');
+    XHR.addEventListener('error', function() {
+      window.alert('Something went wrong. Please check your internet connection and try again.');
     });
 
-    XHR.open("POST", "http://vladbogdan.com/form_submit.php");
+    XHR.open('POST', 'https://vladbogdan.com/form_submit.php');
     XHR.send(FD);
   }
 
-  form.addEventListener("submit", function (event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
     sendData();
   });
