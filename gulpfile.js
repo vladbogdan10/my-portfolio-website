@@ -22,7 +22,7 @@ gulp.task('sass', function () {
   .pipe(sourcemaps.init())
   .pipe(sass(sassOptions).on('error', sass.logError))
   // .pipe(autoprefixer(autoprefixerOptions))
-  .pipe(sourcemaps.write('../../../maps'))
+  .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest(output))
   .pipe(browserSync.stream());
 });
@@ -31,12 +31,12 @@ gulp.task('sass', function () {
 gulp.task('serve', ['sass'], function () {
   browserSync.init({
     server: {
-      baseDir: "./public"
+      baseDir: './public'
     }
   });
   
   gulp.watch(input, ['sass']);
-  gulp.watch("./public/*.html").on('change', browserSync.reload);
+  gulp.watch('./public/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('prod', function () {
