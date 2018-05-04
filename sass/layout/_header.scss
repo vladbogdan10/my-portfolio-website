@@ -15,16 +15,19 @@
     @include slide-right-speed(0.8s);
   }
 
-  .icon {
-    color: #000000;
-    font-size: 20px;
-    padding: 2px;
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease;
+  .nav-icons {
+    display: inline-block;
+    transition: all 0.35s ease-in-out;
 
     &:hover {
-      color: #FFCC66;
+      transform: rotate(360deg);
     }
+  }
+
+  .icon {
+    color: #000000;
+    font-size: 1.3em;
+    padding: 2px;
   }
 
   .logo img {
@@ -43,6 +46,16 @@
   margin-top: 40px;
   font-weight: 500;
   font-size: 18px;
+
+  a {
+    padding: 5px 10px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      font-weight: bold;
+      transform: translateY(2px);
+    }
+  }
 }
 
 
@@ -52,15 +65,14 @@
   margin-top: 10%;
   height: 580px;
   background: url(../images/header-image.png) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
+
 @media screen and (max-width: 680px) {
   .top-nav {
-    .left-icons, .right-icons {
+    .left-icons,
+    .right-icons {
       align-self: flex-start;
       padding-top: 20px;
     }

@@ -1,9 +1,7 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -288,16 +286,19 @@ a {
   }
 }
 
-.top-nav .icon {
-  color: #000000;
-  font-size: 20px;
-  padding: 2px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+.top-nav .nav-icons {
+  display: inline-block;
+  transition: all 0.35s ease-in-out;
 }
 
-.top-nav .icon:hover {
-  color: #FFCC66;
+.top-nav .nav-icons:hover {
+  transform: rotate(360deg);
+}
+
+.top-nav .icon {
+  color: #000000;
+  font-size: 1.3em;
+  padding: 2px;
 }
 
 .top-nav .logo img {
@@ -316,20 +317,28 @@ a {
   font-size: 18px;
 }
 
+.menu a {
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  transform: translateY(2px);
+}
+
 .header-img {
   max-width: 1680px;
   margin: 0 auto;
   margin-top: 10%;
   height: 580px;
   background: url(../images/header-image.png) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
 @media screen and (max-width: 680px) {
-  .top-nav .left-icons, .top-nav .right-icons {
+  .top-nav .left-icons,
+  .top-nav .right-icons {
     align-self: flex-start;
     padding-top: 20px;
   }
