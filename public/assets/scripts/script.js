@@ -1,4 +1,3 @@
-'use strict';
 // Keep form label up if not empty.
 var inputs = document.querySelectorAll('.js-input');
 for (var i = 0; i < inputs.length; i++) {
