@@ -1,16 +1,14 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
-.navbar, #about, #portfolio {
+#about, #portfolio {
   max-width: 1120px;
   margin: 0 auto;
   width: 96%;
@@ -215,22 +213,17 @@ a {
   content: "\eaca";
 }
 
-.navbar {
-  padding-top: 50px;
-  font-size: 0;
+.top-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 160px;
 }
 
-.navbar .left-icons,
-.navbar .logo,
-.navbar .right-icons {
-  display: inline-block;
-  width: 33.3%;
-}
-
-.navbar .left-icons {
-  -moz-animation: 0.5s ease-out 0s 1 slideInLeft;
-  -webkit-animation: 0.5s ease-out 0s 1 slideInLeft;
-  animation: 0.5s ease-out 0s 1 slideInLeft;
+.top-nav .left-icons {
+  -moz-animation: 0.8s ease-out 0s 1 slideInLeft;
+  -webkit-animation: 0.8s ease-out 0s 1 slideInLeft;
+  animation: 0.8s ease-out 0s 1 slideInLeft;
 }
 
 @-webkit-keyframes slideInLeft {
@@ -260,11 +253,10 @@ a {
   }
 }
 
-.navbar .right-icons {
-  text-align: right;
-  -moz-animation: 0.5s ease-out 0s 1 slideInRight;
-  -webkit-animation: 0.5s ease-out 0s 1 slideInRight;
-  animation: 0.5s ease-out 0s 1 slideInRight;
+.top-nav .right-icons {
+  -moz-animation: 0.8s ease-out 0s 1 slideInRight;
+  -webkit-animation: 0.8s ease-out 0s 1 slideInRight;
+  animation: 0.8s ease-out 0s 1 slideInRight;
 }
 
 @-moz-keyframes slideInRight {
@@ -294,75 +286,45 @@ a {
   }
 }
 
-.navbar .icon {
+.top-nav .nav-icons {
+  display: inline-block;
+  transition: all 0.35s ease-in-out;
+}
+
+.top-nav .nav-icons:hover {
+  transform: rotate(360deg);
+}
+
+.top-nav .icon {
   color: #000000;
-  font-size: 20px;
+  font-size: 1.3em;
   padding: 2px;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
 }
 
-.navbar .icon:hover {
-  color: #FFCC66;
-}
-
-.navbar .logo {
-  text-align: center;
-  margin-bottom: 110px;
-}
-
-.navbar .logo img {
+.top-nav .logo img {
   width: 100%;
   max-width: 140px;
   height: auto;
-  margin-bottom: -20px;
 }
 
 .menu {
-  max-width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 680px;
   margin: 0 auto;
-  text-align: center;
+  margin-top: 40px;
   font-weight: 500;
-}
-
-.menu div {
-  display: inline-block;
-  width: 33.3%;
-}
-
-.menu span {
-  position: relative;
   font-size: 18px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
-.menu span:active {
-  background-color: #FFCC66;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  padding: 0 4px 0 4px;
+.menu a {
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
 }
 
-.menu span::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 2px;
-  width: 100%;
-  border-bottom: 2px solid #FFCC66;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-  transition: opacity 0.2s, transform 0.2s;
-  -webkit-transform: scale(0, 1);
-  transform: scale(0, 1);
-}
-
-.menu span:hover::before {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+.menu a:hover {
+  font-weight: bold;
+  transform: translateY(2px);
 }
 
 .header-img {
@@ -371,21 +333,20 @@ a {
   margin-top: 10%;
   height: 580px;
   background: url(../images/header-image.png) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar {
+@media screen and (max-width: 680px) {
+  .top-nav .left-icons,
+  .top-nav .right-icons {
+    align-self: flex-start;
     padding-top: 20px;
   }
-  .navbar .logo {
-    margin-bottom: 120px;
+  .top-nav .logo img {
+    max-width: 110px;
   }
-  .navbar .logo img {
-    margin-bottom: -70px;
+  .menu {
+    margin-top: 0;
   }
   .header-img {
     background: url(../images/header-image-phone.png) no-repeat center center;
@@ -406,7 +367,7 @@ a {
 #about .about-me {
   text-align: center;
   font-size: 1.5em;
-  line-height: 22px;
+  line-height: 2;
   color: #808080;
 }
 
@@ -423,7 +384,7 @@ a {
 #about .about-me .middle-line {
   width: 1px;
   height: 50px;
-  border-right: 1px solid #E6E6E6;
+  background-color: #E6E6E6;
   margin: 0 auto;
 }
 
@@ -747,4 +708,4 @@ a {
   margin-left: 4px;
 }
 
-/*# sourceMappingURL=../../../maps/style.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -1,16 +1,15 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
+  
 }
 
-.navbar, #about, #portfolio {
+#about, #portfolio {
   max-width: 1120px;
   margin: 0 auto;
   width: 96%;
