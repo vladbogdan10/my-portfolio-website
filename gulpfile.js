@@ -18,13 +18,14 @@ var autoprefixerOptions = {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
-  return gulp.src(input)
-  .pipe(sourcemaps.init())
-  .pipe(sass(sassOptions).on('error', sass.logError))
-  // .pipe(autoprefixer(autoprefixerOptions))
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest(output))
-  .pipe(browserSync.stream());
+  return gulp
+    .src(input)
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    // .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(output))
+    .pipe(browserSync.stream());
 });
 
 // Static Server + watching scss/html files
@@ -44,7 +45,7 @@ gulp.task('prod', function () {
     .src(input)
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(gulp.dest(output));
+    .pipe(gulp.dest('./public/prod'));
 });
 
 gulp.task('default', ['serve']);
