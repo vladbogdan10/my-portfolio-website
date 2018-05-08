@@ -59,6 +59,7 @@ a {
 
 [class^="icon-"]:after, [class*=" icon-"]:after {
   position: absolute;
+  text-align: center;
   font-family: Arial, sans-serif;
   font-size: 0.32em;
   bottom: -0.8em;
@@ -355,8 +356,8 @@ a {
 }
 
 #about {
-  margin-top: 4%;
-  margin-bottom: 8%;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 #about h1 {
@@ -390,20 +391,20 @@ a {
 
 #about .about-me p:nth-child(7) {
   font-size: 0.75em;
+  padding-bottom: 10px;
 }
 
 #about .skills-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 2.2em;
 }
 
 #about .skills-icons span {
-  padding: 10px;
+  padding: 12px;
   opacity: 0.8;
-  line-height: 1.5;
-  -webkit-transition: all 0.1s ease;
+  line-height: 1.2;
   transition: all 0.1s ease;
 }
 
@@ -415,6 +416,9 @@ a {
   #about .about-me {
     font-size: 1.2em;
   }
+  #about .skills-icons {
+    font-size: 1.9em;
+  }
   #about h1 {
     display: none;
   }
@@ -425,7 +429,7 @@ a {
   font-size: 0;
 }
 
-#portfolio h1 {
+#portfolio h2 {
   color: #E6E6E6;
   font-size: 24px;
 }
@@ -544,7 +548,7 @@ a {
   padding-bottom: 50px;
 }
 
-#footer .footer-heading h1 {
+#footer .footer-heading h3 {
   color: #FFFFFF;
   font-size: 2.3em;
   letter-spacing: 2px;
