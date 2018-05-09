@@ -681,35 +681,41 @@ a {
 }
 
 .footer-bottom {
-  position: relative;
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
   background-color: #000000;
 }
 
 .footer-bottom p {
-  height: 18px;
-  position: absolute;
-  margin: auto;
-  left: 14px;
-  top: 0;
-  bottom: 0;
   color: #CCCEE8;
   font-size: 14px;
+  margin-left: 10px;
 }
 
 .footer-bottom .footer-icons {
-  position: absolute;
-  height: 22px;
-  margin: auto;
-  right: 14px;
-  top: 0;
-  bottom: 0;
+  display: flex;
   font-size: 20px;
+  margin-right: 6px;
 }
 
 .footer-bottom .footer-icons a {
   color: #CCCEE8;
-  margin-left: 4px;
+  padding: 0 4px;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-bottom {
+    flex-direction: column-reverse;
+  }
+  .footer-bottom .footer-icons {
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 24px;
+    margin: 0;
+    padding: 8px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
