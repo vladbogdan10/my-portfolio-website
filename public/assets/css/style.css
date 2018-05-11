@@ -8,350 +8,84 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-#about, #portfolio {
-  max-width: 1120px;
-  margin: 0 auto;
-  width: 96%;
-}
-
 a {
   text-decoration: none;
   color: #464646;
 }
 
-@font-face {
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Quicksand Regular"), local("Quicksand-Regular"), url(https://fonts.gstatic.com/s/quicksand/v7/sKd0EMYPAh5PYCRKSryvW5Bw1xU1rKptJj_0jans920.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+.navbar,
+#menu,
+.burger-menu {
+  transition: all 0.2s ease-out;
 }
 
-@font-face {
-  font-family: 'Quicksand';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Quicksand Medium"), local("Quicksand-Medium"), url(https://fonts.gstatic.com/s/quicksand/v7/FRGja7LlrG1Mypm0hCq0Dhampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?fehku0");
-  src: url("../fonts/icomoon.eot?fehku0#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?fehku0") format("truetype"), url("../fonts/icomoon.woff?fehku0") format("woff"), url("../fonts/icomoon.svg?fehku0#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
+.navbar {
   position: relative;
-  font-family: 'icomoon' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:after, [class*=" icon-"]:after {
-  position: absolute;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 0.32em;
-  bottom: -0.8em;
-  right: 0;
   left: 0;
-  color: black;
+  padding-left: 0;
 }
 
-.icon-ajax:before {
-  content: "\e903";
-  color: #4789c1;
+.navbar .active#menu {
+  left: 150px;
+  width: 150px;
 }
 
-.icon-ajax:after {
-  content: "Ajax";
+.navbar .active.burger-menu {
+  left: 150px;
 }
 
-.icon-responsive-design:before {
-  content: "\e902";
-  color: #3821ce;
+#menu {
+  margin-left: -150px;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  /* so the menu or its navicon stays above all content */
+  background: #191818;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.icon-responsive-design:after {
-  content: "RWD";
+#menu .selected {
+  background: #1f8dd6;
 }
 
-.icon-adobephotoshop:before {
-  content: "\e904";
-  color: #00c8ff;
+.burger-menu {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0.8em 0.9em 0.6em 0.9em;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.icon-adobephotoshop:after {
-  content: "Photoshop";
+.burger-menu img {
+  width: 22px;
 }
 
-.icon-jquery:before {
-  content: "\e909";
-  color: #0769ad;
+.burger-menu:hover, .burger-menu:focus {
+  background: #000;
 }
 
-.icon-jquery:after {
-  content: "jQuery";
-}
-
-.icon-git:before {
-  content: "\e905";
-  color: #f14e32;
-}
-
-.icon-git:after {
-  content: "Git";
-}
-
-.icon-bootstrap:before {
-  content: "\e906";
-  color: #563d7c;
-}
-
-.icon-bootstrap:after {
-  content: "Bootstrap";
-}
-
-.icon-sass:before {
-  content: "\e908";
-  color: #c69;
-}
-
-.icon-sass:after {
-  content: "Sass";
-}
-
-.icon-css:before {
-  content: "\e901";
-  color: #f43059;
-}
-
-.icon-css:after {
-  content: "CSS";
-}
-
-.icon-html5:before {
-  content: "\e900";
-  color: #e34f26;
-}
-
-.icon-html5:after {
-  content: "HTML5";
-}
-
-.icon-javascript:before {
-  content: "\e90a";
-  color: #f7df1e;
-}
-
-.icon-javascript:after {
-  content: "JavaScript";
-}
-
-.icon-gulp:before {
-  content: "\e907";
-  color: #da4648;
-}
-
-.icon-gulp:after {
-  content: "Gulp";
-}
-
-.icon-wordpress:before {
-  content: "\eab4";
-  color: #21759b;
-}
-
-.icon-wordpress:after {
-  content: "WP";
-}
-
-.icon-php:before {
-  content: "\e90d";
-  color: #777bb4;
-}
-
-.icon-php:after {
-  content: "PHP";
-}
-
-.icon-mysql:before {
-  content: "\e90c";
-  color: #4479a1;
-}
-
-.icon-mysql:after {
-  content: "MySQL";
-}
-
-.icon-paper-plane:before {
-  content: "\e90b";
-}
-
-.icon-facebook:before {
-  content: "\ea90";
-}
-
-.icon-twitter:before {
-  content: "\ea96";
-}
-
-.icon-github:before {
-  content: "\eab0";
-}
-
-.icon-linkedin2:before {
-  content: "\eaca";
-}
-
-.top-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 160px;
-}
-
-.top-nav .left-icons {
-  -moz-animation: 0.8s ease-out 0s 1 slideInLeft;
-  -webkit-animation: 0.8s ease-out 0s 1 slideInLeft;
-  animation: 0.8s ease-out 0s 1 slideInLeft;
-}
-
-@-webkit-keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
+@media (min-width: 48em) {
+  .navbar {
+    padding-left: 150px;
+    /* left col width "#menu" */
+    left: 0;
   }
-  100% {
-    transform: translateX(0);
+  #menu {
+    left: 150px;
   }
-}
-
-@-moz-keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
+  .burger-menu {
+    position: fixed;
+    left: 150px;
+    display: none;
   }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.top-nav .right-icons {
-  -moz-animation: 0.8s ease-out 0s 1 slideInRight;
-  -webkit-animation: 0.8s ease-out 0s 1 slideInRight;
-  animation: 0.8s ease-out 0s 1 slideInRight;
-}
-
-@-moz-keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.top-nav .nav-icons {
-  display: inline-block;
-  transition: all 0.35s ease-in-out;
-}
-
-.top-nav .nav-icons:hover {
-  transform: rotate(360deg);
-}
-
-.top-nav .icon {
-  color: #000000;
-  font-size: 1.3em;
-  padding: 2px;
-}
-
-.top-nav .logo img {
-  width: 100%;
-  max-width: 140px;
-  height: auto;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-evenly;
-  max-width: 680px;
-  margin: 0 auto;
-  margin-top: 40px;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.menu a {
-  padding: 5px 10px;
-  transition: all 0.2s ease-in-out;
-}
-
-.menu a:hover {
-  font-weight: bold;
-  transform: translateY(2px);
-}
-
-.header-img {
-  max-width: 1680px;
-  margin: 0 auto;
-  margin-top: 10%;
-  height: 580px;
-  background: url(../images/header-image.png) no-repeat center center;
-  background-size: cover;
-}
-
-@media screen and (max-width: 680px) {
-  .top-nav .left-icons,
-  .top-nav .right-icons {
-    align-self: flex-start;
-    padding-top: 20px;
-  }
-  .top-nav .logo img {
-    max-width: 110px;
-  }
-  .menu {
-    margin-top: 0;
-  }
-  .header-img {
-    background: url(../images/header-image-phone.png) no-repeat center center;
-    background-size: cover;
+  .navbar.active .burger-menu {
+    left: 150px;
   }
 }
 
@@ -629,6 +363,201 @@ a {
     margin: 0;
     padding: 8px 0;
   }
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Quicksand Regular"), local("Quicksand-Regular"), url(https://fonts.gstatic.com/s/quicksand/v7/sKd0EMYPAh5PYCRKSryvW5Bw1xU1rKptJj_0jans920.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Quicksand Medium"), local("Quicksand-Medium"), url(https://fonts.gstatic.com/s/quicksand/v7/FRGja7LlrG1Mypm0hCq0Dhampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?fehku0");
+  src: url("../fonts/icomoon.eot?fehku0#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?fehku0") format("truetype"), url("../fonts/icomoon.woff?fehku0") format("woff"), url("../fonts/icomoon.svg?fehku0#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  position: relative;
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:after, [class*=" icon-"]:after {
+  position: absolute;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 0.32em;
+  bottom: -0.8em;
+  right: 0;
+  left: 0;
+  color: black;
+}
+
+.icon-ajax:before {
+  content: "\e903";
+  color: #4789c1;
+}
+
+.icon-ajax:after {
+  content: "Ajax";
+}
+
+.icon-responsive-design:before {
+  content: "\e902";
+  color: #3821ce;
+}
+
+.icon-responsive-design:after {
+  content: "RWD";
+}
+
+.icon-adobephotoshop:before {
+  content: "\e904";
+  color: #00c8ff;
+}
+
+.icon-adobephotoshop:after {
+  content: "Photoshop";
+}
+
+.icon-jquery:before {
+  content: "\e909";
+  color: #0769ad;
+}
+
+.icon-jquery:after {
+  content: "jQuery";
+}
+
+.icon-git:before {
+  content: "\e905";
+  color: #f14e32;
+}
+
+.icon-git:after {
+  content: "Git";
+}
+
+.icon-bootstrap:before {
+  content: "\e906";
+  color: #563d7c;
+}
+
+.icon-bootstrap:after {
+  content: "Bootstrap";
+}
+
+.icon-sass:before {
+  content: "\e908";
+  color: #c69;
+}
+
+.icon-sass:after {
+  content: "Sass";
+}
+
+.icon-css:before {
+  content: "\e901";
+  color: #f43059;
+}
+
+.icon-css:after {
+  content: "CSS";
+}
+
+.icon-html5:before {
+  content: "\e900";
+  color: #e34f26;
+}
+
+.icon-html5:after {
+  content: "HTML5";
+}
+
+.icon-javascript:before {
+  content: "\e90a";
+  color: #f7df1e;
+}
+
+.icon-javascript:after {
+  content: "JavaScript";
+}
+
+.icon-gulp:before {
+  content: "\e907";
+  color: #da4648;
+}
+
+.icon-gulp:after {
+  content: "Gulp";
+}
+
+.icon-wordpress:before {
+  content: "\eab4";
+  color: #21759b;
+}
+
+.icon-wordpress:after {
+  content: "WP";
+}
+
+.icon-php:before {
+  content: "\e90d";
+  color: #777bb4;
+}
+
+.icon-php:after {
+  content: "PHP";
+}
+
+.icon-mysql:before {
+  content: "\e90c";
+  color: #4479a1;
+}
+
+.icon-mysql:after {
+  content: "MySQL";
+}
+
+.icon-paper-plane:before {
+  content: "\e90b";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin2:before {
+  content: "\eaca";
 }
 
 /*# sourceMappingURL=style.css.map */

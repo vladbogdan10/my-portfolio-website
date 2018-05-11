@@ -1,0 +1,78 @@
+.navbar,
+#menu,
+.burger-menu {
+  transition: all 0.2s ease-out;
+}
+
+.navbar {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+
+  .active#menu {
+    left: 150px;
+    width: 150px;
+  }
+
+  .active.burger-menu {
+    left: 150px;
+  }
+}
+
+
+#menu {
+  margin-left: -150px;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000; /* so the menu or its navicon stays above all content */
+  background: #191818;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .selected {
+    background: #1f8dd6;
+  }
+}
+
+
+.burger-menu {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0.8em 0.9em 0.6em 0.9em;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  img {
+    width: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    background: #000;
+  }
+}
+
+@media (min-width: 48em) {
+  .navbar {
+    padding-left: 150px; /* left col width "#menu" */
+    left: 0;
+  }
+  #menu {
+    left: 150px;
+  }
+
+  .burger-menu {
+    position: fixed;
+    left: 150px;
+    display: none;
+  }
+
+  .navbar.active .burger-menu {
+      left: 150px;
+  }
+}
