@@ -1,7 +1,6 @@
 (function (window, document) {
 
-  var layout     = document.querySelector('.navbar'),
-      menu       = document.querySelector('#menu'),
+  var menu       = document.querySelector('#menu'),
       burgerMenu = document.querySelector('.burger-menu'),
       content    = document.querySelector('.main');
 
@@ -28,7 +27,6 @@
     var active = 'active';
 
     e.preventDefault();
-    toggleClass(layout, active);
     toggleClass(menu, active);
     toggleClass(burgerMenu, active);
   }
