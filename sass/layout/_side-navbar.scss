@@ -1,0 +1,146 @@
+$animate: all 0.2s ease-out;
+$nav-width: 240px;
+$nav-negative-width: -240px;
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: $nav-negative-width;
+  width: $nav-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background: #191818;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: $animate;
+
+  .selected {
+    font-size: 1.5em;
+    color: #CCCEE8;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    border-bottom: 1px solid rgba(204, 206, 232, 0.418);
+  }
+
+  &.active {
+    left: $nav-width;
+    width: $nav-width;
+  }
+}
+
+
+.burger-menu {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0.8em 0.9em 0.6em 0.9em;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: $animate;
+
+  img {
+    width: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    background: #191818;
+  }
+
+  &.active {
+    left: $nav-width;
+  }
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 33.3%;
+
+
+  a {
+    font-size: 40px;
+    font-weight: 600;
+    color: #FFCC66;
+    border: 1px solid #FFCC66;
+    padding: 10px;
+    margin-top: 50px;
+    // background-color: #FFCC66;
+  }
+}
+
+
+.menu-links {
+  flex-basis: 33.3%;
+  padding-left: 8px;
+  font-size: 1.5em;
+  line-height: 2;
+  font-weight: bold;
+}
+
+
+.bottom-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-basis: 33.3%;
+  // position: relative;
+  // background: #FFCC66;
+  // width: 100%;
+  // height: 80px;
+
+  // &:after {
+  //   position: absolute;
+  //   content: '';
+  //   left: 0;
+  //   bottom: 40px;
+  //   width: 100%;
+  //   height: 100px;
+  //   background-color: #FFCC66;
+  //   transform: skewY(18deg);
+  //   z-index: -1;
+  // }
+
+  .nav-icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    padding: 26px 0 20px 0;
+    border-top: 1px solid rgba(255, 204, 102, 0.274);
+
+    a {
+      color: #FFCC66;
+    }
+  }
+  
+  p {
+    text-align: center;
+    color: #FFCC66;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+  }
+}
+
+
+@media (min-width: 48em) {
+  body {
+    padding-left: $nav-width;
+  }
+  #menu {
+    left: $nav-width;
+  }
+  .burger-menu {
+    position: fixed;
+    left: $nav-width;
+    display: none;
+  }
+  .navbar.active .burger-menu {
+    left: $nav-width;
+  }
+}

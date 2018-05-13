@@ -1,0 +1,35 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  border: 1px solid;
+
+  p {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 4em;
+    
+    span {
+      text-align: center;
+      flex-basis: 25%;
+      margin: 50px 0;
+      padding: 10px;
+      opacity: 0.8;
+      // line-height: 2;
+      transition: all 0.1s ease;
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
