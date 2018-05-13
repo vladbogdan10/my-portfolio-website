@@ -13,43 +13,33 @@ a {
   color: #464646;
 }
 
-.navbar,
-#menu,
-.burger-menu {
-  transition: all 0.2s ease-out;
-}
-
-.navbar {
-  position: relative;
-  left: 0;
-  padding-left: 0;
-}
-
-.navbar .active#menu {
-  left: 150px;
-  width: 150px;
-}
-
-.navbar .active.burger-menu {
-  left: 150px;
-}
-
 #menu {
-  margin-left: -150px;
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-left: -240px;
+  width: 240px;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 1000;
-  /* so the menu or its navicon stays above all content */
+  z-index: 10;
   background: #191818;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  transition: all 0.2s ease-out;
 }
 
 #menu .selected {
-  background: #1f8dd6;
+  font-size: 1.5em;
+  color: #CCCEE8;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  border-bottom: 1px solid rgba(204, 206, 232, 0.418);
+}
+
+#menu.active {
+  left: 240px;
+  width: 240px;
 }
 
 .burger-menu {
@@ -60,6 +50,7 @@ a {
   z-index: 10;
   padding: 0.8em 0.9em 0.6em 0.9em;
   background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out;
 }
 
 .burger-menu img {
@@ -67,31 +58,85 @@ a {
 }
 
 .burger-menu:hover, .burger-menu:focus {
-  background: #000;
+  background: #191818;
+}
+
+.burger-menu.active {
+  left: 240px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 33.3%;
+}
+
+.logo a {
+  font-size: 40px;
+  font-weight: 600;
+  color: #FFCC66;
+  border: 1px solid #FFCC66;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.menu-links {
+  flex-basis: 33.3%;
+  padding-left: 8px;
+  font-size: 1.5em;
+  line-height: 2;
+  font-weight: bold;
+}
+
+.bottom-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-basis: 33.3%;
+}
+
+.bottom-links .nav-icons {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5em;
+  padding: 26px 0 20px 0;
+  border-top: 1px solid rgba(255, 204, 102, 0.274);
+}
+
+.bottom-links .nav-icons a {
+  color: #FFCC66;
+}
+
+.bottom-links p {
+  text-align: center;
+  color: #FFCC66;
+  padding-bottom: 10px;
+  font-size: 0.8em;
 }
 
 @media (min-width: 48em) {
-  .navbar {
-    padding-left: 150px;
-    /* left col width "#menu" */
-    left: 0;
+  body {
+    padding-left: 240px;
   }
   #menu {
-    left: 150px;
+    left: 240px;
   }
   .burger-menu {
     position: fixed;
-    left: 150px;
+    left: 240px;
     display: none;
   }
   .navbar.active .burger-menu {
-    left: 150px;
+    left: 240px;
   }
 }
 
 #about {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 #about h1 {
@@ -123,43 +168,51 @@ a {
   margin: 0 auto;
 }
 
-#about .about-me p:nth-child(7) {
-  font-size: 0.75em;
-  padding-bottom: 10px;
-}
-
-#about .skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 2.2em;
-}
-
-#about .skills-icons span {
-  padding: 12px;
-  opacity: 0.8;
-  line-height: 1.2;
-  transition: all 0.1s ease;
-}
-
-#about .skills-icons span:hover {
-  opacity: 1;
-}
-
 @media screen and (max-width: 500px) {
   #about .about-me {
     font-size: 1.2em;
   }
-  #about .skills-icons {
-    font-size: 1.9em;
-  }
-  #about h1 {
-    display: none;
-  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  border: 1px solid;
+}
+
+.skills p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.skills .skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 4em;
+}
+
+.skills .skills-icons span {
+  text-align: center;
+  flex-basis: 25%;
+  margin: 50px 0;
+  padding: 10px;
+  opacity: 0.8;
+  transition: all 0.1s ease;
+}
+
+.skills .skills-icons span:hover {
+  opacity: 1;
 }
 
 #portfolio {
-  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
   font-size: 0;
 }
 
@@ -270,17 +323,23 @@ a {
   padding-top: 70%;
 }
 
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  border: 1px solid;
+}
+
 #footer h3 {
   font-size: 2.3em;
   letter-spacing: 2px;
   font-weight: 500;
   text-align: center;
-  padding-top: 40px;
-  margin-bottom: -40px;
+  margin-bottom: 20px;
 }
 
 #footer .form-wrapper {
-  padding: 60px 0;
   width: 96%;
   max-width: 700px;
   margin: 0 auto;
@@ -407,7 +466,7 @@ a {
   position: absolute;
   text-align: center;
   font-family: Arial, sans-serif;
-  font-size: 0.32em;
+  font-size: 0.2em;
   bottom: -0.8em;
   right: 0;
   left: 0;
