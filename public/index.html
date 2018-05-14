@@ -27,23 +27,23 @@
 
     <div id="menu">
       <div class="logo">
-        <a class="" href="#">vb</a>
+        <a class="" href="/">vb</a>
       </div>
       <div class="menu-links">
         <ul class="">
           <li class="">
-            <a href="#" class="">About</a>
+            <a href="#about" class="selected">About</a>
           </li>
           <li class="">
-            <a href="#" class="selected">Skillset</a>
-          </li>
-  
-          <li class="">
-            <a href="#" class="">Portfolio</a>
+            <a href="#skills">Skillset</a>
           </li>
   
           <li class="">
-            <a href="#" class="">Contact</a>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+  
+          <li class="">
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -86,7 +86,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section id="skills">
       <p>Skills and technologies I'm currently using</p>
       <div class="skills-icons">
           <span class="icon-html5"></span>
@@ -154,47 +154,50 @@
     </section>
   </main>
   <!-- /main -->
-  <footer id="footer">
-    <h3>GET IN TOUCH</h3>
-    <div class="form-wrapper">
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-    <!-- <div class="footer-bottom">
-      <p>&copy; 2018 Vlad Bogdan</p>
-      <div class="footer-icons">
-        <div>
-          <a href="https://facebook.com/vladb90" target="_blank" rel="noopener">
-            <span class="icon-facebook"></span>
-          </a>
-        </div>
-        <div>
-          <a href="https://twitter.com/_vladbogdan" target="_blank" rel="noopener">
-            <span class="icon-twitter"></span>
-          </a>
-        </div>
-        <div>
-          <a href="https://linkedin.com/in/vlad-bogdan" target="_blank" rel="noopener">
-            <span class="icon-linkedin2"></span>
-          </a>
-        </div>
-        <div>
-          <a href="https://github.com/vladbogdan10" target="_blank" rel="noopener">
-            <span class="icon-github"></span>
-          </a>
+  <section id="contact">
+    <footer>
+      <h3>GET IN TOUCH</h3>
+      <div class="form-wrapper">
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="example@domain.com" required>
+          <label for="message">Message</label>
+          <textarea name="message" placeholder="Drop me a few lines..."></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2018 Vlad Bogdan</p>
+        <div class="footer-icons">
+          <div>
+            <a href="https://facebook.com/vladb90" target="_blank" rel="noopener">
+              <span class="icon-facebook"></span>
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/_vladbogdan" target="_blank" rel="noopener">
+              <span class="icon-twitter"></span>
+            </a>
+          </div>
+          <div>
+            <a href="https://linkedin.com/in/vlad-bogdan" target="_blank" rel="noopener">
+              <span class="icon-linkedin2"></span>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/vladbogdan10" target="_blank" rel="noopener">
+              <span class="icon-github"></span>
+            </a>
+          </div>
         </div>
       </div>
-    </div> -->
-  </footer>
+    </footer>
+  </section>
   <!-- <script src="./assets/scripts/smooth-scroll.min.js"></script> -->
   <script src="./assets/scripts/side-navbar.js" async></script>
+  <script src="./assets/scripts/scrollspy.js" async></script>
   <script src="./assets/scripts/form-submit.js" async></script>
   <!-- <script>
     var scroll = new SmoothScroll('a[href*="#"]');

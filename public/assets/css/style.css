@@ -13,6 +13,11 @@ a {
   color: #464646;
 }
 
+#about, #skills, #portfolio, footer {
+  height: 100vh;
+  min-height: 600px;
+}
+
 #menu {
   display: flex;
   flex-direction: column;
@@ -70,6 +75,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   flex-basis: 33.3%;
+  min-height: 150px;
 }
 
 .logo a {
@@ -83,6 +89,7 @@ a {
 
 .menu-links {
   flex-basis: 33.3%;
+  min-height: 250px;
   padding-left: 8px;
   font-size: 1.5em;
   line-height: 2;
@@ -94,6 +101,7 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   flex-basis: 33.3%;
+  min-height: 150px;
 }
 
 .bottom-links .nav-icons {
@@ -112,7 +120,7 @@ a {
   text-align: center;
   color: #FFCC66;
   padding-bottom: 10px;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 @media (min-width: 48em) {
@@ -136,7 +144,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
 }
 
 #about h1 {
@@ -174,20 +181,19 @@ a {
   }
 }
 
-.skills {
+#skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
   border: 1px solid;
 }
 
-.skills p {
+#skills p {
   text-align: center;
   font-size: 1.5em;
 }
 
-.skills .skills-icons {
+#skills .skills-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -196,23 +202,22 @@ a {
   font-size: 4em;
 }
 
-.skills .skills-icons span {
+#skills .skills-icons span {
   text-align: center;
   flex-basis: 25%;
-  margin: 50px 0;
+  margin: 5% 0;
   padding: 10px;
   opacity: 0.8;
   transition: all 0.1s ease;
 }
 
-.skills .skills-icons span:hover {
+#skills .skills-icons span:hover {
   opacity: 1;
 }
 
 #portfolio {
   display: flex;
   justify-content: center;
-  height: 100vh;
   font-size: 0;
 }
 
@@ -323,15 +328,16 @@ a {
   padding-top: 70%;
 }
 
-#footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  position: relative;
   border: 1px solid;
 }
 
-#footer h3 {
+footer h3 {
   font-size: 2.3em;
   letter-spacing: 2px;
   font-weight: 500;
@@ -339,19 +345,19 @@ a {
   margin-bottom: 20px;
 }
 
-#footer .form-wrapper {
+footer .form-wrapper {
   width: 96%;
   max-width: 700px;
-  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
-#footer .form-wrapper form {
+footer .form-wrapper form {
   border-radius: 8px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 2.5%;
 }
 
-#footer .form-wrapper input[type=text], #footer .form-wrapper input[type=email] {
+footer .form-wrapper input[type=text], footer .form-wrapper input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -360,7 +366,7 @@ a {
   border-radius: 4px;
 }
 
-#footer .form-wrapper textarea {
+footer .form-wrapper textarea {
   width: 100%;
   height: 150px;
   padding: 12px 20px;
@@ -371,7 +377,7 @@ a {
   resize: none;
 }
 
-#footer .form-wrapper input[type=submit] {
+footer .form-wrapper input[type=submit] {
   width: 100%;
   background-color: #FFCC66;
   color: white;
@@ -382,28 +388,33 @@ a {
   cursor: pointer;
 }
 
-#footer .form-wrapper input[type=submit]:hover {
+footer .form-wrapper input[type=submit]:hover {
   background-color: #ffd684;
 }
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   align-items: center;
-  min-height: 50px;
+  width: 100%;
   background-color: #000000;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-bottom p {
   color: #CCCEE8;
-  font-size: 14px;
+  font-size: 0.7em;
   margin-left: 10px;
 }
 
 .footer-bottom .footer-icons {
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 250px;
   font-size: 20px;
-  margin-right: 6px;
+  padding: 8px 0;
 }
 
 .footer-bottom .footer-icons a {
@@ -411,16 +422,9 @@ a {
   padding: 0 4px;
 }
 
-@media screen and (max-width: 500px) {
+@media (min-width: 48em) {
   .footer-bottom {
-    flex-direction: column-reverse;
-  }
-  .footer-bottom .footer-icons {
-    justify-content: space-evenly;
-    width: 100%;
-    font-size: 24px;
-    margin: 0;
-    padding: 8px 0;
+    display: none;
   }
 }
 
