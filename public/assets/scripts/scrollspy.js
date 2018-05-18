@@ -11,7 +11,7 @@
     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
     for (i in sections) {
-      if (sections[i] <= scrollPosition + 100) {
+      if (sections[i] <= scrollPosition + 350) {
         document.querySelector('.selected').setAttribute('class', ' ');
         document.querySelector('a[href*=' + i + ']').setAttribute('class', 'selected');
       }
