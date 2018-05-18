@@ -1,60 +1,99 @@
+$animate: all 0.2s ease-in-out;
+
 #portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2%;
+  // padding: 2%;
+  border-top: 1px solid;
 
   .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 90%;
-    padding: 50px 0;
-    border-bottom: 1px solid rgb(231, 231, 231);
-    
+    position: relative;
+    width: 85%;
+    padding: 70px 0;
+    border-bottom: 1px solid rgb(252, 210, 126);
+    transition: $animate;
+    // background-color: rgb(252, 222, 99);
+
     &:nth-last-child(1) {
       border: none;
     }
-    
-    .project-img {
-      flex-basis: 50%;
-      min-width: 400px;
-      
-      img {
-        width: 100%;
-        height: auto;
-        max-width: 450px;
-      }
 
-      .calc-img {
-        width: 50%;
-        max-width: 250px;
-      }
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
 
-      .tributepage-img {
-        width: 60%;
-        max-width: 270px;
-      }
-    }
-    
-    .description {
-    flex-basis: 50%;
-    min-width: 400px;
-    align-self: center;
-    
-      p {
-        padding: 20px 0;
-        line-height: 1.5;
-        font-size: 14px;
-      }
-    }
-  
-    @media (max-width: 460px) {
-      .project-img, .description {
-        flex-basis: 100%;
-        min-width: 100%;
-      }
-    }
+.project-img {
+  flex-basis: 35%;
+  min-width: 390px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+  }
+
+  .calc-img {
+    width: 50%;
+    max-width: 250px;
+  }
+
+  .tributepage-img {
+    width: 60%;
+    max-width: 270px;
+  }
+}
+
+.description {
+  flex-basis: 35%;
+  min-width: 390px;
+  align-self: center;
+
+  h2 {
+    color: rgb(77, 77, 77);
+  }
+
+  p {
+    padding: 20px 0;
+    line-height: 1.5;
+    font-size: 0.9em;
+    color: rgb(118, 118, 118);
+  }
+
+  .tag {
+    font-size: 0.8em;
+    background-color: rgb(216, 216, 216);
+    padding: 0.1em 0.4em;
+    border-radius: 0.2em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .html {
+    background-color: rgb(253, 189, 148);
+  }
+  .css {
+    background-color: rgb(116, 152, 203);
+  }
+  .javascript {
+    background-color: rgb(245, 222, 108);
+  }
+  .bootstrap {
+    background-color: rgb(166, 134, 203);
+  }
+}
+
+@media (max-width: 460px) {
+  .project-img,
+  .description {
+    flex-basis: 100%;
+    min-width: 100%;
   }
 }
 
@@ -72,7 +111,7 @@
 .align-left {
   display: flex;
   flex-flow: row-reverse;
-  
+
   .project-img {
     text-align: left;
   }
@@ -83,7 +122,7 @@
   }
 }
 
-@media (max-width: 1165px) {
+@media (max-width: 955px) {
   .align-right .description,
   .align-left .description {
     text-align: center;
