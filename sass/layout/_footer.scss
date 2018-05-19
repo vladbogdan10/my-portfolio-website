@@ -1,26 +1,31 @@
 $dark-yellow: #FFCC66;
 $footer-main: #F6F6F6;//#333366
 
-#footer {
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid;
+
   h3 {
     font-size: 2.3em;
     letter-spacing: 2px;
     font-weight: 500;
     text-align: center;
-    padding-top: 40px;
-    margin-bottom: -40px;
+    margin-bottom: 20px;
   }
 
   .form-wrapper {
-    padding: 60px 0;
     width: 96%;
     max-width: 700px;
-    margin: 0 auto;
+    margin-bottom: 50px;
   
     form {
       border-radius: 8px;
       background-color: #f2f2f2;
-      padding: 20px;
+      padding: 2.5%;
     }
   
     input[type=text], input[type=email] {
@@ -30,7 +35,6 @@ $footer-main: #F6F6F6;//#333366
       border: none;
       border: 1px solid rgb(216, 216, 216);
       border-radius: 4px;
-      // border: 1px solid $dark-yellow;
     }
   
     textarea {
@@ -63,21 +67,26 @@ $footer-main: #F6F6F6;//#333366
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   align-items: center;
-  min-height: 50px;
+  width: 100%;
   background-color: #000000;
+  position: fixed;
+  bottom: 0;
 
   p {
     color: #CCCEE8;
-    font-size: 14px;
+    font-size: 0.7em;
     margin-left: 10px;
   }
 
   .footer-icons {
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 250px;
     font-size: 20px;
-    margin-right: 6px;
+    padding: 8px 0;
 
     a {
       color: #CCCEE8;
@@ -85,16 +94,8 @@ $footer-main: #F6F6F6;//#333366
     }
   }
 
-  @media screen and (max-width: 500px) {
-    flex-direction: column-reverse;
-
-    .footer-icons {
-      justify-content: space-evenly;
-      width: 100%;
-      font-size: 24px;
-      margin: 0;
-      padding: 8px 0;
-    }
+  @media (min-width: 48em) {
+    display: none;
   }
 }
 
