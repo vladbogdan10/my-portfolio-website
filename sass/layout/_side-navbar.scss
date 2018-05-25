@@ -14,10 +14,12 @@ $nav-negative-width: -240px;
   bottom: 0;
   z-index: 10;
   background: #191818;
+  background-color: #000000;
+  background-image: url(https://www.transparenttextures.com/patterns/black-felt.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   transition: $animate;
-  
 
   .selected {
     font-size: 1.5em;

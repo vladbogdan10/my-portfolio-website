@@ -1,9 +1,36 @@
-.skills {
+#skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  border: 1px solid;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.08);
+
+  &:before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    bottom: -1.52em;
+    right: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background-color: rgb(235, 235, 235);
+    // box-shadow: inset 2px 2px 0px rgb(255, 231, 136);
+  }
+
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   height: 2px;
+  //   width: 70%;
+  //   margin: auto;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background-color: rgb(255, 231, 136);
+  //   z-index: -1;
+  // }
 
   p {
     text-align: center;
@@ -21,7 +48,7 @@
     span {
       text-align: center;
       flex-basis: 25%;
-      margin: 50px 0;
+      margin: 5% 0;
       padding: 10px;
       opacity: 0.8;
       // line-height: 2;
