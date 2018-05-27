@@ -1,149 +1,48 @@
-$animate: all 0.2s ease-in-out;
+.portfolio {
+  border-top: 1px solid rgb(222, 222, 222);
+  padding: 140px 0;
 
-#portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  padding: 10% 0;
+  &__container {
+    width: 98%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 40px;
 
-  &:before {
-    content: '';
-    position: absolute;
-    margin: auto;
-    bottom: -1.52em;
-    right: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    transform: rotate(45deg);
-    background-color: rgb(255, 255, 255);
-    // box-shadow: inset 2px 2px 0px rgb(255, 231, 136);
-  }
-
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    width: 85%;
-    padding: 70px 0;
-    border-bottom: 1px solid rgb(252, 210, 126);
-    transition: $animate;
-
-    &:nth-last-child(1) {
-      border: none;
-    }
-
-    &:hover {
-      transform: scale(1.02);
+    @media (min-width: 850px) {
+      width: 80%;
     }
   }
-}
 
-.project-img {
-  flex-basis: 35%;
-  min-width: 390px;
+  &__row {
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
 
-  img {
+  &__columns {
+    margin: 1%;
+    font-size: 0;
+    background-color: rgba(28, 79, 109, 0.2);
+  }
+
+  &__img {
     width: 100%;
-    height: auto;
-    max-width: 450px;
+    position: relative;
+    z-index: -1;
+    opacity: 0.95;
   }
 
-  .calc-img {
-    width: 50%;
-    max-width: 250px;
-  }
+  @media (min-width: 650px) {
+    &__row {
+      display: flex;
+    }
 
-  .tributepage-img {
-    width: 60%;
-    max-width: 270px;
-  }
-}
+    &__columns {
+      flex-basis: 70%;
 
-.description {
-  flex-basis: 35%;
-  min-width: 390px;
-  align-self: center;
-
-  h2 {
-    color: rgb(77, 77, 77);
-  }
-
-  p {
-    padding: 20px 0;
-    line-height: 1.5;
-    font-size: 0.9em;
-    color: rgb(118, 118, 118);
-  }
-
-  .tag {
-    font-size: 0.8em;
-    background-color: rgb(216, 216, 216);
-    padding: 0.1em 0.4em;
-    border-radius: 0.2em;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .html {
-    background-color: rgb(253, 189, 148);
-  }
-  .css {
-    background-color: rgb(116, 152, 203);
-  }
-  .javascript {
-    background-color: rgb(245, 222, 108);
-  }
-  .bootstrap {
-    background-color: rgb(166, 134, 203);
-  }
-}
-
-@media (max-width: 460px) {
-  .project-img,
-  .description {
-    flex-basis: 100%;
-    min-width: 100%;
-  }
-}
-
-.align-right {
-  .project-img {
-    text-align: right;
-  }
-
-  .description {
-    text-align: left;
-    padding-left: 20px;
-  }
-}
-
-.align-left {
-  display: flex;
-  flex-flow: row-reverse;
-
-  .project-img {
-    text-align: left;
-  }
-
-  .description {
-    text-align: right;
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 955px) {
-  .align-right .description,
-  .align-left .description {
-    text-align: center;
-    padding: 0;
-  }
-
-  .align-right .project-img,
-  .align-left .project-img {
-    text-align: center;
+      &--smaller {
+        flex-basis: 32%;
+      }
+    }
   }
 }

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vlad Bogdan | Web Developer and Designer</title>
+  <title>Vlad Bogdan | Frontend Developer</title>
   <meta property="og:title" content="Vlad Bogdan | Portfolio Website" />
   <meta property="og:description" content="Web Developer and Designer" />
   <meta property="og:image" content="https://vladbogdan.com/images/website-thumbnail.jpg" />
@@ -19,10 +19,8 @@
 
 <body>
   <div class="navbar">
-    <!-- Menu toggle -->
     <button class="burger-menu">
-      <!-- Hamburger icon -->
-      <img src="./assets/images/hamburger-menu-icon.svg" alt="Burger menu icon">
+      <span class="icon-menu"></span>
     </button>
 
     <div id="menu">
@@ -30,19 +28,14 @@
         <a class="" href="/">vb</a>
       </div>
       <div class="menu-links">
-        <ul class="">
-          <li class="">
+        <ul>
+          <li>
             <a href="#about" class="selected">About</a>
           </li>
-          <li class="">
-            <a href="#skills">Skillset</a>
-          </li>
-
-          <li class="">
+          <li>
             <a href="#portfolio">Portfolio</a>
           </li>
-
-          <li class="">
+          <li>
             <a href="#contact">Contact</a>
           </li>
         </ul>
@@ -77,162 +70,81 @@
   </div>
 
   <main class="main">
-    <section id="about">
-      <h1>About</h1>
-      <div class="about-me">
-        <img src="./assets/images/hi-there.svg" alt="">
-        <p>my name is
-          <span class="span-style">Vlad</span>. I am a self-taught</p>
-        <p>
-          <span class="span-style">Web Developer &amp; Designer</span>
+    <div class="header-img"></div>
+
+    <section id="about" class="about">
+      <div class="heading">
+        <h1 class="heading__title">HI THERE,</h1>
+        <p class="heading__subtitle">
+          MY NAME IS VLAD. I AM A
+          <u>FRONT-END</u> DEVELOPER WITH SOME BACKEND SKILLS
+          <br> CURRENTLY LIVING IN THE BEAUTIFUL CITY OF MUNICH
         </p>
-        <p>based in the beautiful city of</p>
-        <p>
-          <span class="span-style">Munich</span>
+      </div>
+      <div class="about__text">
+        <span class="icon-hipster about__icons"></span>
+        <p>I want to be involved in projects that I can be proud of, join an amazing team and advance my development career.
+          Take some time to look at my projects, and if you're interested in helping me make this happen,
+          <a href="#contact">
+            <u>let's get in touch.</u>
+          </a>
         </p>
-        <div class="middle-line"></div>
+
+        <span class="icon-pencil2 about__icons"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in.</p>
       </div>
     </section>
 
-    <section id="skills">
-      <h1>Skillset</h1>
-      <p>Skills and technologies I'm currently using</p>
-      <div class="skills-icons">
-        <span class="icon-html5"></span>
-        <span class="icon-css"></span>
-        <span class="icon-javascript"></span>
-        <span class="icon-jquery"></span>
-        <span class="icon-sass"></span>
-        <span class="icon-gulp"></span>
-        <span class="icon-ajax"></span>
-        <span class="icon-git"></span>
-        <span class="icon-bootstrap"></span>
-        <span class="icon-responsive-design"></span>
-        <span class="icon-wordpress"></span>
-        <span class="icon-adobephotoshop"></span>
+    <section id="portfolio" class="portfolio">
+      <div class="heading">
+        <h1 class="heading__title">PORTFOLIO</h1>
+        <p class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</p>
       </div>
-    </section>
-    <!-- /section -->
-    <section id="portfolio">
-      <h1>Portfolio</h1>
-      <div class="projects align-right">
-        <div class="project-img">
-          <img src="./assets/images/weather-app.png" alt="...">
+      <div class="portfolio__container">
+        <div class="portfolio__row">
+          <div class="portfolio__columns">
+            <img class="portfolio__img" src="assets/images/weather-landscape.png" alt="">
+          </div>
+          <div class="portfolio__columns portfolio__columns--smaller">
+            <picture>
+              <source media="(min-width: 650px)" srcset="assets/images/calculator.png">
+              <img class="portfolio__img" src="assets/images/calculator-landscape.png" alt="">
+            </picture>
+          </div>
         </div>
-
-        <div class="description">
-          <h2>Weather App</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum lobortis arcu eget commodo. Vivamus sit
-            amet cursus elit, vel malesuada metus. Proin id lectus eros. Mauris maximus dictum fringilla. Praesent interdum
-            accumsan nibh quis facilisis. Suspendisse id tincidunt risus.</p>
-          <p>
-            <span class="tag html">HTML</span>&nbsp;
-            <span class="tag css">CSS</span>&nbsp;
-            <span class="tag javascript">JAVASCRIPT</span>&nbsp;
-            <span class="tag bootstrap">BOOTSTRAP</span>
-          </p>
+        <div class="portfolio__row portfolio__row--reverse">
+          <div class="portfolio__columns">
+            <img class="portfolio__img" src="assets/images/wikipedia.png" alt="">
+          </div>
+          <div class="portfolio__columns portfolio__columns--smaller">
+            <picture>
+              <source media="(min-width: 650px)" srcset="assets/images/random-quote.png">
+              <img class="portfolio__img" src="assets/images/random-quote-landscape.png" alt="">
+            </picture>
+          </div>
         </div>
-      </div>
-      
-      <div class="projects align-left">
-        <div class="project-img">
-          <img class="calc-img" src="./assets/images/calculator-portrait.png" alt="iphone displaying a calculator">
-        </div>
-
-        <div class="description">
-          <h2>JS Calculator</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum lobortis arcu eget commodo. Vivamus sit
-            amet cursus elit, vel malesuada metus. Proin id lectus eros. Mauris maximus dictum fringilla. Praesent interdum
-            accumsan nibh quis facilisis. Suspendisse id tincidunt risus.</p>
-          <p>
-            <span class="tag html">HTML</span>&nbsp;
-            <span class="tag css">CSS</span>&nbsp;
-            <span class="tag javascript">JAVASCRIPT</span>&nbsp;
-            <span class="tag bootstrap">BOOTSTRAP</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="projects align-right">
-        <div class="project-img">
-          <img src="./assets/images/wikipedia.png" alt="...">
-        </div>
-
-        <div class="description">
-          <h2>Wikipedia Viewer</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum lobortis arcu eget commodo. Vivamus sit
-            amet cursus elit, vel malesuada metus. Proin id lectus eros. Mauris maximus dictum fringilla. Praesent interdum
-            accumsan nibh quis facilisis. Suspendisse id tincidunt risus.</p>
-          <p>
-            <span class="tag html">HTML</span>&nbsp;
-            <span class="tag css">CSS</span>&nbsp;
-            <span class="tag javascript">JAVASCRIPT</span>&nbsp;
-            <span class="tag bootstrap">BOOTSTRAP</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="projects align-left">
-        <div class="project-img">
-          <img src="./assets/images/random-quote.png" alt="...">
-        </div>
-
-        <div class="description">
-          <h2>Quote Generator</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum lobortis arcu eget commodo. Vivamus sit
-            amet cursus elit, vel malesuada metus. Proin id lectus eros. Mauris maximus dictum fringilla. Praesent interdum
-            accumsan nibh quis facilisis. Suspendisse id tincidunt risus.</p>
-          <p>
-            <span class="tag html">HTML</span>&nbsp;
-            <span class="tag css">CSS</span>&nbsp;
-            <span class="tag javascript">JAVASCRIPT</span>&nbsp;
-            <span class="tag bootstrap">BOOTSTRAP</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="projects align-right">
-        <div class="project-img">
-          <img src="./assets/images/twitch.png" alt="...">
-        </div>
-
-        <div class="description">
-          <h2>Twitch App</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum lobortis arcu eget commodo. Vivamus sit
-            amet cursus elit, vel malesuada metus. Proin id lectus eros. Mauris maximus dictum fringilla. Praesent interdum
-            accumsan nibh quis facilisis. Suspendisse id tincidunt risus.</p>
-          <p>
-            <span class="tag html">HTML</span>&nbsp;
-            <span class="tag css">CSS</span>&nbsp;
-            <span class="tag javascript">JAVASCRIPT</span>&nbsp;
-            <span class="tag bootstrap">BOOTSTRAP</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="projects align-left">
-        <div class="project-img">
-          <img class="tributepage-img" src="./assets/images/elon.png" alt="...">
-        </div>
-
-        <div class="description">
-          <h2>Tribute Page</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum lobortis arcu eget commodo. Vivamus sit
-            amet cursus elit, vel malesuada metus. Proin id lectus eros. Mauris maximus dictum fringilla. Praesent interdum
-            accumsan nibh quis facilisis. Suspendisse id tincidunt risus.</p>
-          <p>
-            <span class="tag html">HTML</span>&nbsp;
-            <span class="tag css">CSS</span>&nbsp;
-            <span class="tag javascript">JAVASCRIPT</span>&nbsp;
-            <span class="tag bootstrap">BOOTSTRAP</span>
-          </p>
+        <div class="portfolio__row">
+          <div class="portfolio__columns">
+            <img class="portfolio__img" src="assets/images/twitch.png" alt="">
+          </div>
+          <div class="portfolio__columns portfolio__columns--smaller">
+            <picture>
+              <source media="(min-width: 650px)" srcset="assets/images/elon.png">
+              <img class="portfolio__img" src="assets/images/elon-landscape.png" alt="">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
   </main>
   <!-- /main -->
   <section id="contact">
-    <h1>Contact</h1>
+    <div class="heading">
+      <h1 class="heading__title">CONTACT</h1>
+      <p class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</p>
+    </div>
     <footer>
       <h3>GET IN TOUCH</h3>
       <div class="form-wrapper">
