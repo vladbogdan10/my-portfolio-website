@@ -1,139 +1,125 @@
-$gold-yellow: #FFCC66;
+@import 'helpers/watercolor__brush';
 $animate: all 0.2s ease-out;
-$nav-width: 240px;
-$nav-negative-width: -240px;
+$nav-width: 220px;
+$nav-negative-width: -220px;
 
-#menu {
-  display: flex;
-  flex-direction: column;
-  margin-left: $nav-negative-width;
-  width: $nav-width;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-  background: #191818;
-  background-color: #000000;
-  background-image: url(https://www.transparenttextures.com/patterns/black-felt.png);
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  transition: $animate;
-
-  .selected {
-    font-size: 1.5em;
-    color: #CCCEE8;
-    letter-spacing: 2px;
-    margin-left: 10px;
-    border-bottom: 1px solid rgba(204, 206, 232, 0.418);
-  }
-
-  &.active {
-    left: $nav-width;
-    width: $nav-width;
-  }
-}
-
-
-.burger-menu {
-  position: fixed;
-  // display: block;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  border: none;
-  outline: none;
-  padding: 0.9em 1.1em;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: $animate;
-
-  img {
-    width: 22px;
-  }
-
-  &:hover,
-  &:focus {
-    background: #191818;
-  }
-
-  &.active {
-    left: $nav-width;
-  }
-}
-
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-basis: 33.3%;
-  min-height: 150px;
-
-
-  a {
-    font-size: 40px;
-    font-weight: 600;
-    color: $gold-yellow;
-    border: 1px solid $gold-yellow;
-    padding: 10px;
-    margin-top: 50px;
-    // background-color: $gold-yellow;
-  }
-}
-
-
-.menu-links {
-  flex-basis: 33.3%;
-  min-height: 250px;
-  padding-left: 8px;
-  font-size: 1.5em;
-  line-height: 2;
-  font-weight: bold;
-}
-
-
-.bottom-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-basis: 33.3%;
-  min-height: 150px;
-
-  .nav-icons {
+.side-navbar {
+  &__container {
     display: flex;
-    justify-content: space-evenly;
-    font-size: 1.5em;
-    padding: 26px 0 20px 0;
-    border-top: 1px solid rgba(255, 204, 102, 0.274);
-
-    a {
-      color: $gold-yellow;
+    flex-direction: column;
+    margin-left: $nav-negative-width;
+    width: $nav-width;
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    background-image: url('/assets/images/ecailles.png');
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: $animate;
+  
+    &.is-active {
+      left: $nav-width;
+      width: $nav-width;
     }
   }
+
+  &__button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border: none;
+    outline: none;
+    padding: 0.9em 1.1em;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: $animate;
   
-  p {
+    span {
+      font-size: 24px;
+      color: white;
+    }
+  
+    &:hover,
+    &:focus {
+      background: #191818;
+    }
+  
+    &.is-active {
+      left: $nav-width;
+    }
+  }
+
+  &__menu {
+    margin-top: auto;
     text-align: center;
-    color: $gold-yellow;
-    padding-bottom: 10px;
-    font-size: 0.7em;
+  }
+
+  &__list {
+    list-style: none;
+    font-size: 1.7em;
+    line-height: 2;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    .is-selected {
+      display: block;
+      color: rgb(255, 255, 255);
+      position: relative;
+
+      @include watercolor__brush(
+        170px, 28px, url('/assets/images/brushes/blue-brush.png')
+      );
+    }
+  
+    a {
+      color: rgb(121, 121, 121);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    
+    p {
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 0.7em;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.4em;
+    padding: 26px 0 20px 0;
+
+    a {
+      color: rgb(255, 255, 255);
+      position: relative;
+      
+      @include watercolor__brush(
+        100%, 30px, url('/assets/images/brushes/bigblue-brush.png')
+      );
+    }
   }
 }
 
-
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
   body {
     padding-left: $nav-width;
   }
-  #menu {
-    left: $nav-width;
-  }
-  .burger-menu {
-    position: fixed;
-    left: $nav-width;
-    display: none;
-  }
-  .navbar.active .burger-menu {
-    left: $nav-width;
+  .side-navbar {
+    &__container {
+      left: $nav-width;
+    }
+
+    &__button {
+      position: fixed;
+      left: $nav-width;
+      display: none;
+    }
   }
 }
