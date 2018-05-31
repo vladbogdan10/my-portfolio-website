@@ -1,7 +1,7 @@
 (function (window, document) {
 
-  var menu       = document.querySelector('#menu'),
-      burgerMenu = document.querySelector('.burger-menu'),
+  var menu       = document.querySelector('.side-navbar__container'),
+      burgerMenu = document.querySelector('.side-navbar__button'),
       content    = document.querySelector('.main');
 
   function toggleClass(element, className) {
@@ -24,7 +24,7 @@
   }
 
   function toggleAll(e) {
-    var active = 'active';
+    var active = 'is-active';
 
     e.preventDefault();
     toggleClass(menu, active);
@@ -36,7 +36,7 @@
   };
 
   content.onclick = function (e) {
-    if (menu.className.indexOf('active') !== -1) {
+    if (menu.className.indexOf('is-active') !== -1) {
       toggleAll(e);
     }
   };
