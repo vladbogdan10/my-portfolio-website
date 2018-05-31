@@ -5,7 +5,9 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Neucha', 'Comic Sans MS', sans-serif;
+  background-color: #ffffff;
+  background-image: url('/assets/images/ecailles.png');
 }
 
 a {
@@ -14,9 +16,9 @@ a {
 }
 
 @import 'layout/side-navbar';
+@import 'layout/header';
+@import 'layout/headings';
 @import 'layout/about';
-@import 'layout/skills-section';
 @import 'layout/portfolio';
 @import 'layout/footer';
-@import 'helpers/quicksand-font';
 @import 'helpers/font-icons';
