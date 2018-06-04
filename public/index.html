@@ -14,23 +14,20 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Website thumbnail" />
   <link rel="icon" href="./favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Neucha|Permanent+Marker" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <div class="navbar">
-    <button class="burger-menu">
+  <nav class="side-navbar">
+    <button class="side-navbar__button">
       <span class="icon-menu"></span>
     </button>
-
-    <div id="menu">
-      <div class="logo">
-        <a class="" href="/">vb</a>
-      </div>
-      <div class="menu-links">
-        <ul>
+    <div class="side-navbar__container">
+      <div class="side-navbar__menu">
+        <ul class="side-navbar__list">
           <li>
-            <a href="#about" class="selected">About</a>
+            <a href="#about" class="is-selected">About</a>
           </li>
           <li>
             <a href="#portfolio">Portfolio</a>
@@ -40,9 +37,8 @@
           </li>
         </ul>
       </div>
-
-      <div class="bottom-links">
-        <div class="nav-icons">
+      <div class="side-navbar__links">
+        <div class="side-navbar__icons">
           <div>
             <a href="https://facebook.com/vladb90" target="_blank" rel="noopener">
               <span class="icon-facebook"></span>
@@ -64,22 +60,23 @@
             </a>
           </div>
         </div>
-        <p>&copy; 2018 Vlad Bogdan</p>
+        <p>
+          &copy; 2018 Vlad Bogdan
+        </p>
       </div>
     </div>
-  </div>
-
+  </nav>
   <main class="main">
-    <div class="header-img"></div>
+    <header class="header-img"></header>
 
     <section id="about" class="about">
       <div class="heading">
-        <h1 class="heading__title">HI THERE,</h1>
-        <p class="heading__subtitle">
+        <h1 class="heading__title heading__title--about">HI THERE,</h1>
+        <h2 class="heading__subtitle">
           MY NAME IS VLAD. I AM A
           <u>FRONT-END</u> DEVELOPER WITH SOME BACKEND SKILLS
           <br> CURRENTLY LIVING IN THE BEAUTIFUL CITY OF MUNICH
-        </p>
+        </h2>
       </div>
       <div class="about__text">
         <span class="icon-hipster about__icons"></span>
@@ -99,40 +96,41 @@
 
     <section id="portfolio" class="portfolio">
       <div class="heading">
-        <h1 class="heading__title">PORTFOLIO</h1>
-        <p class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</p>
+        <h1 class="heading__title heading__title--portfolio">PORTFOLIO</h1>
+        <h2 class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</h2>
       </div>
       <div class="portfolio__container">
         <div class="portfolio__row">
           <div class="portfolio__columns">
-            <img class="portfolio__img" src="assets/images/weather-landscape.png" alt="">
+            <img class="portfolio__img" src="assets/images/weather.jpg" alt="">
           </div>
           <div class="portfolio__columns portfolio__columns--smaller">
             <picture>
-              <source media="(min-width: 650px)" srcset="assets/images/calculator.png">
-              <img class="portfolio__img" src="assets/images/calculator-landscape.png" alt="">
+              <source media="(min-width: 600px)" srcset="assets/images/calculator-small.jpg">
+              <img class="portfolio__img" src="assets/images/calculator.jpg" alt="">
             </picture>
           </div>
         </div>
         <div class="portfolio__row portfolio__row--reverse">
           <div class="portfolio__columns">
-            <img class="portfolio__img" src="assets/images/wikipedia.png" alt="">
+            <img class="portfolio__img" src="assets/images/twitch.jpg" alt="">
           </div>
           <div class="portfolio__columns portfolio__columns--smaller">
             <picture>
-              <source media="(min-width: 650px)" srcset="assets/images/random-quote.png">
-              <img class="portfolio__img" src="assets/images/random-quote-landscape.png" alt="">
+              <source media="(min-width: 600px)" srcset="assets/images/wikipedia-small.jpg">
+              <img class="portfolio__img" src="assets/images/wikipedia.jpg" alt="">
             </picture>
           </div>
         </div>
         <div class="portfolio__row">
           <div class="portfolio__columns">
-            <img class="portfolio__img" src="assets/images/twitch.png" alt="">
+            <img class="portfolio__img" src="assets/images/quote.jpg" alt="">
           </div>
           <div class="portfolio__columns portfolio__columns--smaller">
+            <p class="portfolio__title">Placeholder</p>
             <picture>
-              <source media="(min-width: 650px)" srcset="assets/images/elon.png">
-              <img class="portfolio__img" src="assets/images/elon-landscape.png" alt="">
+              <source media="(min-width: 600px)" srcset="assets/images/placeholder.jpg">
+              <img class="portfolio__img" src="assets/images/placeholder-mobile.jpg" alt="">
             </picture>
           </div>
         </div>
@@ -140,47 +138,56 @@
     </section>
   </main>
   <!-- /main -->
-  <section id="contact">
+  <section id="contact" class="contact">
     <div class="heading">
-      <h1 class="heading__title">CONTACT</h1>
-      <p class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</p>
+      <h1 class="heading__title heading__title--contact">CONTACT</h1>
+      <h2 class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</h2>
     </div>
     <footer>
-      <h3>GET IN TOUCH</h3>
-      <div class="form-wrapper">
-        <form id="contact-form">
-          <label for="name">Name</label>
-          <input type="text" name="name" placeholder="Your Name" required>
-          <label for="email">Email</label>
-          <input type="email" name="email" placeholder="example@domain.com" required>
-          <label for="message">Message</label>
-          <textarea name="message" placeholder="Drop me a few lines..."></textarea>
-          <input type="submit" value="Submit">
-        </form>
+      <div class="contact__container">
+        <div class="contact__columns contact__columns--smaller">
+          <div class="contact__text">
+            <h2>This Is The End My Friend!</h2>
+            <p>
+              If you feel like it
+              <br> write me something about you
+              <br> and how I can help you.
+              <br> You're awesome. Thank you!
+              <br> Over and out.
+              <span class="icon-hipster"></span>
+            </p>
+          </div>
+        </div>
+        <div class="contact__columns">
+          <form id="contact-form" class="contact__form">
+            <div class="contact__form-elements contact__form-elements--first">
+              <input class="contact__input" type="text" name="name" placeholder="Your Name" autocomplete="off" required>
+            </div>
+            <div class="contact__form-elements contact__form-elements--second">
+              <input class="contact__input" type="email" name="email" placeholder="Email: example@domain.com" autocomplete="off" required>
+            </div>
+            <div class="contact__form-elements contact__form-elements--third">
+              <textarea class="contact__message-input contact__input" name="message" placeholder="Drop me a few lines..."></textarea>
+            </div>
+            <button class="contact__button">SEND</button>
+          </form>
+        </div>
       </div>
-      <div class="footer-bottom">
+      <div class="mobile-footer">
         <p>&copy; 2018 Vlad Bogdan</p>
-        <div class="footer-icons">
-          <div>
-            <a href="https://facebook.com/vladb90" target="_blank" rel="noopener">
-              <span class="icon-facebook"></span>
-            </a>
-          </div>
-          <div>
-            <a href="https://twitter.com/_vladbogdan" target="_blank" rel="noopener">
-              <span class="icon-twitter"></span>
-            </a>
-          </div>
-          <div>
-            <a href="https://linkedin.com/in/vlad-bogdan" target="_blank" rel="noopener">
-              <span class="icon-linkedin2"></span>
-            </a>
-          </div>
-          <div>
-            <a href="https://github.com/vladbogdan10" target="_blank" rel="noopener">
-              <span class="icon-github"></span>
-            </a>
-          </div>
+        <div class="mobile-footer__icons">
+          <a href="https://facebook.com/vladb90" target="_blank" rel="noopener">
+            <span class="icon-facebook"></span>
+          </a>
+          <a href="https://twitter.com/_vladbogdan" target="_blank" rel="noopener">
+            <span class="icon-twitter"></span>
+          </a>
+          <a href="https://linkedin.com/in/vlad-bogdan" target="_blank" rel="noopener">
+            <span class="icon-linkedin2"></span>
+          </a>
+          <a href="https://github.com/vladbogdan10" target="_blank" rel="noopener">
+            <span class="icon-github"></span>
+          </a>
         </div>
       </div>
     </footer>
