@@ -1,6 +1,13 @@
   .header-img {
-    background: url('/assets/images/william-iven-19843-unsplash.jpg') no-repeat center center fixed;
+    background: url('/assets/images/header-image-mobile.jpg') no-repeat center center;
     background-size: cover;
-    height: 60vh;
-    width: 100%;
+    height: 50vh;
+
+    // mobile devices doesn't play nice with position fixed.
+    @media (min-device-width: 1024px) {
+      background: url('/assets/images/header-image-edit.jpg') no-repeat center center fixed;
+      background-size: cover;
+      transform: translate(-5%, -5%) scale(1.1);
+      overflow: hidden;
+    }
   }
