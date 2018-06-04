@@ -1,78 +1,143 @@
-$dark-yellow: #FFCC66;
-$footer-main: #F6F6F6;//#333366
+@import 'helpers/watercolor__brush';
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border: 1px solid;
+.contact {
+  padding-top: 60px;
 
-  h3 {
-    font-size: 2.3em;
-    letter-spacing: 2px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 20px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 94%;
+    margin: 0 auto;
+    padding: 30px 0;
   }
 
-  .form-wrapper {
-    width: 96%;
-    max-width: 700px;
-    margin-bottom: 50px;
-  
-    form {
-      border-radius: 8px;
-      background-color: #f2f2f2;
-      padding: 2.5%;
+  &__columns {
+    flex-basis: 100%;
+  }
+
+  &__text {
+    margin-top: 30px;
+    line-height: 2.2;
+    padding-bottom: 10px;
+
+    h2 {
+      font-size: 1.3em;
+      font-weight: 100;
     }
   
-    input[type=text], input[type=email] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      border: none;
-      border: 1px solid rgb(216, 216, 216);
-      border-radius: 4px;
+    p {
+      font-size: 1.1em;
+      color: rgb(109, 109, 109);
     }
-  
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      margin-top: 10px;
-      border: 1px solid rgb(216, 216, 216);
-      resize: none;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-elements {
+    position: relative;
+    margin: 14px 0;
+
+    &--first {
+      @include watercolor__brush (
+        100%, 50px, 
+        url('/assets/images/brushes/watercolor-orange.png')
+      );
     }
-  
-    input[type=submit] {
-      width: 100%;
-      background-color: $dark-yellow;
+
+    &--second {
+      @include watercolor__brush (
+        100%, 50px, 
+        url('/assets/images/brushes/watercolor-red-small.png')
+      );
+    }
+
+    &--third {
+      margin: 30px 0;
+      @include watercolor__brush (
+        100%, 160px, 
+        url('/assets/images/brushes/watercolor-red-big.png')
+      );
+    }
+  }
+
+  &__input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    padding: 0 7%;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    font-family: 'Neucha', 'Comic Sans MS', sans-serif;
+
+    &::placeholder {
       color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      opacity: 1;
     }
-  
-    input[type=submit]:hover {
-      background-color: rgb(255, 214, 132);
+    
+    &:focus {
+      padding-left: 8%;
+    }
+  }
+
+  &__message-input {
+    resize: none;
+    height: 130px;
+    padding-top: 10px;
+  }
+
+  &__button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    align-self: center;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: white;
+    background: url('/assets/images/brushes/watercolor-red-small.png') no-repeat;
+    background-size: 100% 50px;
+    width: 160px;
+    height: 50px;
+    font-family: 'Neucha', 'Comic Sans MS', sans-serif;
+
+    &:focus, &:active {
+      transform: scale(1.04);
+    }
+  }
+
+  @media (min-width: 700px) {
+    padding-top: 200px;
+  }
+
+  @media (min-width: 680px) {
+    &__container {
+      flex-direction: row;
+      max-width: 1000px;
+      padding-bottom: 100px;
+    }
+    
+    &__columns {
+      flex-basis: 65%;
+      margin: 0 6px;
+
+      &--smaller {
+        flex-basis: 35%;
+      }
     }
   }
 }
 
-.footer-bottom {
+.mobile-footer {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
-  background-color: #000000;
-  position: fixed;
-  bottom: 0;
+  background-color: rgb(10, 10, 10);
 
   p {
     color: #CCCEE8;
@@ -80,7 +145,7 @@ footer {
     margin-left: 10px;
   }
 
-  .footer-icons {
+  &__icons {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -94,7 +159,7 @@ footer {
     }
   }
 
-  @media (min-width: 48em) {
+  @media (min-width: 1025px) {
     display: none;
   }
 }
