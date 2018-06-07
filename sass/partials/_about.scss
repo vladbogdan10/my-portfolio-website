@@ -1,13 +1,6 @@
 .about {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 50px 0;
-  
-  &__icons {
-    display: block;
-    text-align: center;
-    font-size: 1.9em;
-    color: rgb(92, 213, 213);
-  }
 
   &__text {
     width: 90%;
@@ -16,16 +9,32 @@
     margin-top: 80px;
   
     p {
-      margin: 24px 0;
+      margin: 32px 0;
       line-height: 2;
       font-size: 1.1em;
       letter-spacing: 1px;
-      color: rgb(100, 100, 100);
+      color: rgb(68, 104, 121);
     }
   }
 
-  @media (min-width: 600px) {
+  &__icons {
+    display: block;
+    text-align: center;
+    font-size: 1.9em;
+    color: rgb(72, 192, 166);
+  }
+
+  @media (min-width: 650px) {
     padding: 90px 0;
+
+    &__columns {
+      display: flex;
+      align-items: center;
+    }
+
+    &__icons {
+      padding-right: 28px;
+    }
 
     p {
       font-size: 1.2em;

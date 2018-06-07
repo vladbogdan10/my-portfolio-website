@@ -1,0 +1,181 @@
+.portfolio {
+  padding: 60px 0;
+
+  &__container {
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  &__row {
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__columns {
+    margin: 26px 10px;
+    padding-top: 42%;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgba(0, 0, 0, 0.015);
+
+    &:after, &:before {
+      content: '';
+      width: 48%;
+      height: 30px;
+      position: absolute;
+      bottom: 14px;
+      left: 1.5%;
+      transform: rotate(-3deg);
+      box-shadow: 0 15px 10px rgba(0, 0, 0, 0.18);
+      z-index: -20;
+      transition: all 0.2s ease-out;
+    }
+
+    &:before {
+      right: 1.5%;
+      left: auto;
+      transform: rotate(3deg);
+    }
+
+    &:hover {
+      &:after, &:before {
+        bottom: 20px;
+        margin: 0 -3px;
+      }
+    }
+  }
+
+  &__sticky-tape {
+    position: absolute;
+    background: url('/assets/images/sticky-tape.png') no-repeat;
+    background-size: 200px 30px;
+    width: 200px;
+    height: 30px;
+    top: -12px; left: 0; right: 0;
+    margin: auto;
+    z-index: 4;
+    opacity: 0.9;
+
+    &--second {
+      transform: scaleX(-1);
+      filter: hue-rotate(50deg);
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+    font-family: 'Reenie Beanie', cursive;
+
+    h3 {
+      color: rgb(115, 155, 216);
+      font-size: 1.8em;
+      line-height: 0.9;
+    }
+
+    &:hover, &:active {
+      .portfolio__description {
+        display: block;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    display: none;
+    color: rgb(148, 148, 148);
+    padding-top: 8px;
+    font-family: 'Neucha', 'Comic Sans MS', sans-serif;
+    animation: description-fade 0.3s ease forwards;
+
+    a {
+      color: rgb(81, 184, 127);
+    }
+  }
+
+  @media (min-width: 800px) {
+    &__container {
+      width: 82%;
+      max-width: 850px;
+    }
+  }
+
+  @media (min-width: 650px) {
+    padding-top: 90px;
+
+    &__row {
+      display: flex;
+    }
+
+    &__columns {
+      padding-top: 28%;
+      flex-basis: 65%;
+      margin: 2%;
+      position: relative;
+
+      &--small {
+        flex-basis: 35%;
+
+        &:after {
+          width: 90%;
+          bottom: 17px;
+          left: 8px;
+          transform: rotate(-5deg);
+        }
+
+        &:before {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+
+    &__sticky-tape {
+      &--second {
+        background-size: 100px 35px;
+        width: 100px;
+        height: 30px;
+      }
+    }
+    
+    &__title {
+      h3 {
+        font-size: 2.2em;
+        transition: 0.1s ease-out;
+      }
+
+      &--centered {
+        text-align: center;
+        h3 {
+          transform: rotate(-12deg);
+          max-width: 180px;
+          margin: 0 auto;
+        }
+        &:hover {
+          h3 {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      @keyframes description-fade {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+    }
+  }
+}

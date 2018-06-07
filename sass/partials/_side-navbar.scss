@@ -9,11 +9,10 @@ $nav-negative-width: -220px;
     flex-direction: column;
     margin-left: $nav-negative-width;
     width: $nav-width;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0; bottom: 0; left: 0;
     z-index: 10;
-    background-color: #ffffff;
-    background-image: url('/assets/images/ecailles.png');
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -37,7 +36,7 @@ $nav-negative-width: -220px;
     transition: $animate;
   
     span {
-      font-size: 24px;
+      font-size: 22px;
       color: white;
     }
   
@@ -68,14 +67,27 @@ $nav-negative-width: -220px;
       color: rgb(255, 255, 255);
       position: relative;
 
-      @include watercolor__brush(
-        170px, 28px, url('/assets/images/brushes/blue-brush.png')
-      );
+      &:before {
+        content: '';
+        position: absolute;
+        background: url('/assets/images/brush-strokes/blue-brush.png') no-repeat;
+        background-size: 100% 28px;
+        width: 160px;
+        height: 28px;
+        bottom: 15px; left: 32px;
+        z-index: -1;
+        animation: paint 0.4s;
+      }
     }
   
     a {
       color: rgb(121, 121, 121);
     }
+  }
+
+  @keyframes paint {
+    from {width: 0px;}
+    to {width: 160px;}
   }
 
   &__links {
@@ -94,15 +106,19 @@ $nav-negative-width: -220px;
     display: flex;
     justify-content: space-evenly;
     font-size: 1.4em;
-    padding: 26px 0 20px 0;
+    padding-bottom: 26px;
 
     a {
       color: rgb(255, 255, 255);
       position: relative;
-      
       @include watercolor__brush(
-        100%, 30px, url('/assets/images/brushes/bigblue-brush.png')
+        100%, 30px, url('/assets/images/brush-strokes/bigblue-brush.png')
       );
+      transition: $animate;
+
+      &:hover {
+        padding-top: 6px;
+      }
     }
   }
 }

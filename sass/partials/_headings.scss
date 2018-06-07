@@ -1,0 +1,50 @@
+@import 'helpers/watercolor__brush';
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2em;
+    color: white;
+    position: relative;
+
+    &--about {
+      width: 100%;
+      max-width: 200px;
+      @include watercolor__brush (
+        100%, 50px, 
+        url('/assets/images/brush-strokes/bigblue-brush.png')
+      );
+    }
+
+    &--portfolio {
+      width: 100%;
+      max-width: 250px;
+      @include watercolor__brush (
+        100%, 50px, 
+        url('/assets/images/brush-strokes/green-brush.png')
+      );
+    }
+
+    &--contact {
+      width: 100%;
+      max-width: 250px;
+      @include watercolor__brush (
+        100%, 50px, 
+        url('/assets/images/brush-strokes/red-brush.png')
+      );
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.7em;
+    padding: 10px 20px 0 20px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: rgb(109, 109, 109);
+  }
+}
