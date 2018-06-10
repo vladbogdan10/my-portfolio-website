@@ -4,10 +4,9 @@
   box-sizing: border-box;
 }
 
+
 body {
-  font-family: 'Neucha', 'Comic Sans MS', sans-serif;
-  background-color: #ffffff;
-  background-image: url('/assets/images/ecailles.png');
+  font-family: 'Neucha', 'Arial Narrow', sans-serif;
 }
 
 a {
@@ -15,10 +14,10 @@ a {
   color: #464646;
 }
 
-@import 'layout/side-navbar';
-@import 'layout/header';
-@import 'layout/headings';
-@import 'layout/about';
-@import 'layout/portfolio';
-@import 'layout/footer';
+@import 'partials/side-navbar';
+@import 'partials/header';
+@import 'partials/headings';
+@import 'partials/about';
+@import 'partials/portfolio';
+@import 'partials/footer';
 @import 'helpers/font-icons';
