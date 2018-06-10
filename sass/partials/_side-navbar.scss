@@ -28,25 +28,37 @@ $nav-negative-width: -220px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 12;
     border: none;
     outline: none;
-    padding: 0.9em 1.1em;
+    width: 50px;
+    height: 45px;
     background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    color: white;
     transition: $animate;
-  
-    span {
-      font-size: 22px;
-      color: white;
-    }
-  
+
     &:hover,
     &:focus {
-      background: #191818;
+      background-color: rgba(0, 0, 0, 0.9);
     }
-  
+    
+    .icon-close {
+      display: none;
+    }
+
     &.is-active {
-      left: $nav-width;
+      background-color: transparent;
+      position: fixed;
+      left: 170px;
+      
+      .icon-menu {
+        display: none;
+      }
+      .icon-close {
+        display: block;
+        color: black;
+      }
     }
   }
 
@@ -71,23 +83,17 @@ $nav-negative-width: -220px;
         content: '';
         position: absolute;
         background: url('/assets/images/brush-strokes/blue-brush.png') no-repeat;
-        background-size: 100% 28px;
+        background-size: 100% 30px;
         width: 160px;
-        height: 28px;
-        bottom: 15px; left: 32px;
+        height: 30px;
+        bottom: 14px; left: 32px;
         z-index: -1;
-        animation: paint 0.4s;
       }
     }
   
     a {
-      color: rgb(121, 121, 121);
+      color: rgb(68, 104, 121);
     }
-  }
-
-  @keyframes paint {
-    from {width: 0px;}
-    to {width: 160px;}
   }
 
   &__links {
@@ -104,7 +110,7 @@ $nav-negative-width: -220px;
 
   &__icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-size: 1.4em;
     padding-bottom: 26px;
 
