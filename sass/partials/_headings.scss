@@ -7,7 +7,7 @@
   text-align: center;
 
   &__title {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', sans-serif;
     font-size: 2.2em;
     color: white;
     position: relative;
@@ -41,10 +41,10 @@
   }
 
   &__subtitle {
-    font-size: 0.7em;
+    font-size: 0.75em;
     padding: 10px 20px 0 20px;
     letter-spacing: 2px;
     font-weight: 100;
-    color: rgb(109, 109, 109);
+    color: rgb(136, 136, 136);
   }
 }
