@@ -6,22 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vlad Bogdan | Frontend Developer</title>
-  <meta property="og:title" content="Vlad Bogdan | Portfolio Website" />
-  <meta property="og:description" content="Web Developer and Designer" />
-  <meta property="og:image" content="https://vladbogdan.com/images/website-thumbnail.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Website thumbnail" />
+  <meta name="description" content="I want to be involved in projects that I can be proud of, join an amazing team and advance my development career.">
+  <meta property="og:title" content="Vlad Bogdan | Portfolio Website">
+  <meta property="og:description" content="Front-end Web Developer">
+  <meta property="og:image" content="https://vladbogdan.com/assets/images/website-thumbnail.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Website thumbnail">
   <link rel="icon" href="./favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Neucha|Permanent+Marker" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <nav class="side-navbar">
-    <button class="side-navbar__button">
+    <button class="side-navbar__button" name="burger menu for side navigation bar">
       <span class="icon-menu"></span>
+      <span class="icon-close"></span>
     </button>
     <div class="side-navbar__container">
       <div class="side-navbar__menu">
@@ -66,110 +67,180 @@
       </div>
     </div>
   </nav>
+  <!-- NAV END-->
   <main class="main">
     <header class="header-img"></header>
-
     <section id="about" class="about">
       <div class="heading">
         <h1 class="heading__title heading__title--about">HI THERE,</h1>
         <h2 class="heading__subtitle">
           MY NAME IS VLAD. I AM A
           <u>FRONT-END</u> DEVELOPER WITH SOME BACKEND SKILLS
-          <br> CURRENTLY LIVING IN THE BEAUTIFUL CITY OF MUNICH
+          <br>CURRENTLY LIVING IN THE BEAUTIFUL CITY OF MUNICH
         </h2>
       </div>
       <div class="about__text">
-        <span class="icon-hipster about__icons"></span>
-        <p>I want to be involved in projects that I can be proud of, join an amazing team and advance my development career.
-          Take some time to look at my projects, and if you're interested in helping me make this happen,
-          <a href="#contact">
-            <u>let's get in touch.</u>
-          </a>
-        </p>
-
-        <span class="icon-pencil2 about__icons"></span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in.</p>
+        <div class="about__columns">
+          <span class="icon-embed2 about__icons"></span>
+          <p>
+            My technical strengths lie in HTML, CSS, Sass, and Javascript. I also have experience with Git, Gulp, Npm, and frontend frameworks
+            like Bootstrap and Semantic UI. Recently I started learning Node.js and Express with MongoDB and Mongoose.
+          </p>
+        </div>
+        <div class="about__columns">
+          <span class="icon-quill about__icons"></span>
+          <p>
+            I want to be involved in projects that I can be proud of, join an amazing team and advance my development career. Take some
+            time to look at my projects, and if you're interested in helping me make this happen,
+            <a href="#contact">
+              <u>let's get in touch.</u>
+            </a>
+          </p>
+        </div>
       </div>
     </section>
-
+    <!-- ABOUT SECTION END -->
     <section id="portfolio" class="portfolio">
       <div class="heading">
         <h1 class="heading__title heading__title--portfolio">PORTFOLIO</h1>
-        <h2 class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</h2>
+        <h2 class="heading__subtitle">HERE ARE SOME OF MY PERSONAL PROJECTS. STILL WORKING ON BUILDING MY PORTFOLIO</h2>
       </div>
       <div class="portfolio__container">
         <div class="portfolio__row">
           <div class="portfolio__columns">
-            <img class="portfolio__img" src="assets/images/weather.jpg" alt="">
+            <div class="portfolio__sticky-tape"></div>
+            <div class="portfolio__title">
+              <h3>Weather App</h3>
+              <div class="portfolio__description">
+                <p>Has minimalist design and shows the forecast for the next hours and days based on the user location.</p>
+                <br>
+                <a href="https://vladbogdan10.github.io/weather-app/" target="_blank" rel="noopener">
+                  <u>Go to project</u>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio__columns portfolio__columns--smaller">
-            <picture>
-              <source media="(min-width: 600px)" srcset="assets/images/calculator-small.jpg">
-              <img class="portfolio__img" src="assets/images/calculator.jpg" alt="">
-            </picture>
+          <div class="portfolio__columns portfolio__columns--small">
+            <div class="portfolio__sticky-tape portfolio__sticky-tape--second"></div>
+            <div class="portfolio__title portfolio__title--centered">
+              <h3>JavaScript Calculator</h3>
+              <div class="portfolio__description">
+                <p>Does what the name says, but with a nice and clean design &#9786;</p>
+                <br>
+                <a href="https://vladbogdan10.github.io/javascript-calculator/" target="_blank" rel="noopener">
+                  <u>Go to project</u>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="portfolio__row portfolio__row--reverse">
           <div class="portfolio__columns">
-            <img class="portfolio__img" src="assets/images/twitch.jpg" alt="">
+            <div class="portfolio__sticky-tape"></div>
+            <div class="portfolio__title">
+              <h3>Wikipedia Viewer</h3>
+              <div class="portfolio__description">
+                <p>It's like a search engine, but for Wikipedia. Try it!</p>
+                <br>
+                <a href="https://vladbogdan10.github.io/Wikipedia-Viewer/" target="_blank" rel="noopener">
+                  <u>Go to project</u>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio__columns portfolio__columns--smaller">
-            <picture>
-              <source media="(min-width: 600px)" srcset="assets/images/wikipedia-small.jpg">
-              <img class="portfolio__img" src="assets/images/wikipedia.jpg" alt="">
-            </picture>
+          <div class="portfolio__columns portfolio__columns--small">
+            <div class="portfolio__sticky-tape portfolio__sticky-tape--second"></div>
+            <div class="portfolio__title portfolio__title--centered">
+              <h3>Random Quote Generator</h3>
+              <div class="portfolio__description">
+                <p>Shows some random quote and has a Twitter share button.</p>
+                <br>
+                <a href="https://vladbogdan10.github.io/random-quote-machine/" target="_blank" rel="noopener">
+                  <u>Go to project</u>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="portfolio__row">
           <div class="portfolio__columns">
-            <img class="portfolio__img" src="assets/images/quote.jpg" alt="">
+            <div class="portfolio__sticky-tape"></div>
+            <div class="portfolio__title">
+              <h3>Twitch Streamers</h3>
+              <div class="portfolio__description">
+                <p>Shows the avatar, name and game currently played, and if online/offline for some predefined
+                  Twitch users.</p>
+                <br>
+                <a href="https://vladbogdan10.github.io/twitch-streamers/" target="_blank" rel="noopener">
+                  <u>Go to project</u>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio__columns portfolio__columns--smaller">
-            <p class="portfolio__title">Placeholder</p>
-            <picture>
-              <source media="(min-width: 600px)" srcset="assets/images/placeholder.jpg">
-              <img class="portfolio__img" src="assets/images/placeholder-mobile.jpg" alt="">
-            </picture>
+          <div class="portfolio__columns portfolio__columns--small">
+            <div class="portfolio__sticky-tape portfolio__sticky-tape--second"></div>
+            <div class="portfolio__title portfolio__title--centered">
+              <h3>Placeholder</h3>
+              <div class="portfolio__description">
+                <p>Keeps the space warm for my next cool project!</p>
+                <br>
+                <a href="/" target="_blank" rel="noopener">
+                  <u>Go to project</u>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- PORTFOLIO SECTION END -->
   </main>
-  <!-- /main -->
+  <!-- MAIN END -->
   <section id="contact" class="contact">
     <div class="heading">
       <h1 class="heading__title heading__title--contact">CONTACT</h1>
-      <h2 class="heading__subtitle">HERE IT'S GOING TO BE SOME TEXT IN THE FUTURE, JUST WAIT</h2>
+      <h2 class="heading__subtitle">
+        CURRENTLY AVAILABLE FOR FULL-TIME WORK, AND WOULD LOVE TO HEAR FROM YOU
+      </h2>
     </div>
     <footer>
       <div class="contact__container">
         <div class="contact__columns contact__columns--smaller">
           <div class="contact__text">
-            <h2>This Is The End My Friend!</h2>
+            <h3>You reached the end!</h3>
             <p>
               If you feel like it
               <br> write me something about you
               <br> and how I can help you.
               <br> You're awesome. Thank you!
-              <br> Over and out.
-              <span class="icon-hipster"></span>
             </p>
           </div>
         </div>
         <div class="contact__columns">
+          <div id="js-error-hadling">
+            <span class="icon-close contact__close-error"></span>
+            <p class="js-message"></p>
+          </div>
           <form id="contact-form" class="contact__form">
-            <div class="contact__form-elements contact__form-elements--first">
-              <input class="contact__input" type="text" name="name" placeholder="Your Name" autocomplete="off" required>
+            <div class="contact__form-elements">
+              <label class="contact__label" for="name">
+                <span class="icon-user"></span>
+              </label>
+              <input class="contact__input" type="text" name="username" placeholder="Your Name" required>
             </div>
-            <div class="contact__form-elements contact__form-elements--second">
-              <input class="contact__input" type="email" name="email" placeholder="Email: example@domain.com" autocomplete="off" required>
+            <div class="contact__form-elements">
+              <label class="contact__label" for="email">
+                <span class="icon-mail3"></span>
+              </label>
+              <input class="contact__input" type="email" name="email" placeholder="example@domain.com" required>
             </div>
-            <div class="contact__form-elements contact__form-elements--third">
-              <textarea class="contact__message-input contact__input" name="message" placeholder="Drop me a few lines..."></textarea>
+            <div class="contact__form-elements">
+              <label class="contact__label" for="message">
+                <span class="icon-pencil"></span>
+              </label>
+              <textarea class="contact__message-input contact__input" name="message" placeholder="How can I help you?" required></textarea>
             </div>
-            <button class="contact__button">SEND</button>
+            <input class="contact__submit" type="submit" value="Submit">
           </form>
         </div>
       </div>
@@ -192,10 +263,22 @@
       </div>
     </footer>
   </section>
-  <script src="./assets/scripts/smooth-scroll.min.js" async></script>
+  <!-- CONTACT SECTION END -->
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Neucha', 'Permanent Marker', 'Reenie Beanie']
+      }
+    });
+  </script>
   <script src="./assets/scripts/side-navbar.js" async></script>
   <script src="./assets/scripts/scrollspy.js" async></script>
   <script src="./assets/scripts/form-submit.js" async></script>
+  <script src="./assets/scripts/smooth-scroll.js"></script>
+  <script>
+    new SmoothScroll('a[href="#about"], a[href="#portfolio"], a[href="#contact"]');
+  </script>
 </body>
 
 </html>
