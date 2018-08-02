@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?jc6llt');
-  src:  url('../fonts/icomoon.eot?jc6llt#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?jc6llt') format('truetype'),
-    url('../fonts/icomoon.woff?jc6llt') format('woff'),
-    url('../fonts/icomoon.svg?jc6llt#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?uejwq4');
+  src:  url('../fonts/icomoon.eot?uejwq4#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?uejwq4') format('truetype'),
+    url('../fonts/icomoon.woff?uejwq4') format('woff'),
+    url('../fonts/icomoon.svg?uejwq4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,17 +24,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download:before {
+  content: "\e902";
+}
 .icon-close:before {
-  content: "\e900";
+  content: "\e901";
 }
 .icon-menu:before {
-  content: "\e901";
+  content: "\e900";
 }
 .icon-pencil:before {
   content: "\e905";
 }
 .icon-quill:before {
   content: "\e907";
+}
+.icon-file-text2:before {
+  content: "\e926";
 }
 .icon-user:before {
   content: "\e971";
