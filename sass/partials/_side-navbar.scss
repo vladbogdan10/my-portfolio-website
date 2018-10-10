@@ -82,7 +82,7 @@ $nav-negative-width: -220px;
       &:before {
         content: '';
         position: absolute;
-        background: url('/assets/images/brush-strokes/blue-brush.png') no-repeat;
+        background: url('/public/assets/images/brush-strokes/blue-brush.png') no-repeat;
         background-size: 100% 30px;
         width: 160px;
         height: 30px;
@@ -118,7 +118,7 @@ $nav-negative-width: -220px;
       color: rgb(255, 255, 255);
       position: relative;
       @include watercolor__brush(
-        100%, 30px, url('/assets/images/brush-strokes/bigblue-brush.png')
+        100%, 30px, url('/public/assets/images/brush-strokes/bigblue-brush.png')
       );
       transition: $animate;
 

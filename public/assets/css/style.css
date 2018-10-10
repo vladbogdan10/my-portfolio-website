@@ -95,7 +95,7 @@ a {
 .side-navbar__list .is-selected:before {
   content: '';
   position: absolute;
-  background: url("/assets/images/brush-strokes/blue-brush.png") no-repeat;
+  background: url("/public/assets/images/brush-strokes/blue-brush.png") no-repeat;
   background-size: 100% 30px;
   width: 160px;
   height: 30px;
@@ -136,7 +136,7 @@ a {
 .side-navbar__icons a:before {
   content: '';
   position: absolute;
-  background: url("/assets/images/brush-strokes/bigblue-brush.png") no-repeat;
+  background: url("/public/assets/images/brush-strokes/bigblue-brush.png") no-repeat;
   background-size: 100% 30px;
   width: 100%;
   height: 30px;
@@ -167,14 +167,14 @@ a {
 }
 
 .header-img {
-  background: url("/assets/images/header-image-mobile.jpg") no-repeat center center;
+  background: url("/public/assets/images/header-image-mobile.jpg") no-repeat center center;
   background-size: cover;
   height: 40vh;
 }
 
 @media (min-device-width: 1024px) {
   .header-img {
-    background: url("/assets/images/header-image.jpg") no-repeat center center fixed;
+    background: url("/public/assets/images/header-image.jpg") no-repeat center center fixed;
     background-size: cover;
   }
 }
@@ -201,7 +201,7 @@ a {
 .heading__title--about:before {
   content: '';
   position: absolute;
-  background: url("/assets/images/brush-strokes/bigblue-brush.png") no-repeat;
+  background: url("/public/assets/images/brush-strokes/bigblue-brush.png") no-repeat;
   background-size: 100% 50px;
   width: 100%;
   height: 50px;
@@ -221,7 +221,7 @@ a {
 .heading__title--portfolio:before {
   content: '';
   position: absolute;
-  background: url("/assets/images/brush-strokes/green-brush.png") no-repeat;
+  background: url("/public/assets/images/brush-strokes/green-brush.png") no-repeat;
   background-size: 100% 50px;
   width: 100%;
   height: 50px;
@@ -241,7 +241,7 @@ a {
 .heading__title--contact:before {
   content: '';
   position: absolute;
-  background: url("/assets/images/brush-strokes/red-brush.png") no-repeat;
+  background: url("/public/assets/images/brush-strokes/red-brush.png") no-repeat;
   background-size: 100% 50px;
   width: 100%;
   height: 50px;
@@ -352,7 +352,7 @@ a {
 
 .portfolio__sticky-tape {
   position: absolute;
-  background: url("/assets/images/sticky-tape.png") no-repeat;
+  background: url("/public/assets/images/sticky-tape.png") no-repeat;
   background-size: 200px 30px;
   width: 200px;
   height: 30px;

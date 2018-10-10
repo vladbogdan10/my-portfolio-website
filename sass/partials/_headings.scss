@@ -17,7 +17,7 @@
       max-width: 200px;
       @include watercolor__brush (
         100%, 50px, 
-        url('/assets/images/brush-strokes/bigblue-brush.png')
+        url('/public/assets/images/brush-strokes/bigblue-brush.png')
       );
     }
 
@@ -26,7 +26,7 @@
       max-width: 250px;
       @include watercolor__brush (
         100%, 50px, 
-        url('/assets/images/brush-strokes/green-brush.png')
+        url('/public/assets/images/brush-strokes/green-brush.png')
       );
     }
 
@@ -35,7 +35,7 @@
       max-width: 250px;
       @include watercolor__brush (
         100%, 50px, 
-        url('/assets/images/brush-strokes/red-brush.png')
+        url('/public/assets/images/brush-strokes/red-brush.png')
       );
     }
   }
