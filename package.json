@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/vladbogdan10/my-portfolio-website#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "browser-sync": "^2.26.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1",
