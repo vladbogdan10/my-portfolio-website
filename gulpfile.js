@@ -33,12 +33,12 @@ gulp.task('sass', function () {
 gulp.task('serve', ['sass'], function () {
   browserSync.init({
     server: {
-      baseDir: './public'
+      baseDir: './'
     }
   });
   
   gulp.watch(input, ['sass']);
-  gulp.watch('./public/*.html').on('change', browserSync.reload);
+  gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
 gulp.task('compress', function () {
