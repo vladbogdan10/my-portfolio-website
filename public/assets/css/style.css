@@ -468,40 +468,89 @@ a {
 
 .contact {
   margin-top: 100px;
-  height: 600px;
 }
 
-.contact h3 {
+.contact__container {
+  margin: 100px 0;
+}
+
+.contact__text {
   text-align: center;
-  color: #446879;
-  font-size: 1.4em;
-  margin-top: 100px;
-  font-weight: 400;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.contact__card {
+  margin: 26px 0px;
+  padding: 0 20px;
+  position: relative;
+  background-color: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.015);
+}
+
+.contact__card:after, .contact__card:before {
+  content: '';
+  width: 48%;
+  height: 20px;
+  position: absolute;
+  bottom: 14px;
+  left: 1.5%;
+  transform: rotate(-3deg);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.18);
+  z-index: -20;
+  transition: all 0.2s ease-out;
+}
+
+.contact__card:before {
+  right: 1.5%;
+  left: auto;
+  transform: rotate(3deg);
+}
+
+.contact__card:hover:after, .contact__card:hover:before {
+  bottom: 20px;
 }
 
 .contact__social-links {
   font-family: 'Permanent Marker', sans-serif;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  margin-top: 120px;
-  font-size: 2em;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.4em;
 }
 
 .contact__facebook {
-  color: #4469af;
+  color: rgba(68, 105, 175, 0.9);
 }
 
 .contact__twitter {
-  color: #2aa3ef;
+  color: rgba(42, 163, 239, 0.9);
 }
 
 .contact__linkedin {
-  color: #1178b3;
+  color: rgba(17, 120, 179, 0.9);
 }
 
 .contact__github {
-  color: #24292e;
+  color: rgba(36, 41, 46, 0.9);
+}
+
+@media (min-width: 600px) {
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact__text {
+    flex-basis: 43%;
+    text-align: right;
+    line-height: 3.4;
+    padding-top: 20px;
+  }
+  .contact__social-links {
+    flex-basis: 53%;
+    align-items: flex-start;
+  }
 }
 
 .resume {

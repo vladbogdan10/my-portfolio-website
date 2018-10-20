@@ -1,34 +1,89 @@
 .contact {
   margin-top: 100px;
-  height: 600px;
 
-  h3 {
+  &__container {
+    margin: 100px 0;
+  }
+
+  &__text {
     text-align: center;
-    color: rgb(68, 104, 121);
-    font-size: 1.4em;
-    margin-top: 100px;
-    font-weight: 400;
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 1.3em;
+    text-transform: uppercase;
+  }
+
+  &__card {
+    margin: 26px 0px;
+    padding: 0 20px;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgba(0, 0, 0, 0.015);
+
+    &:after, &:before {
+      content: '';
+      width: 48%;
+      height: 20px;
+      position: absolute;
+      bottom: 14px;
+      left: 1.5%;
+      transform: rotate(-3deg);
+      box-shadow: 0 15px 10px rgba(0, 0, 0, 0.18);
+      z-index: -20;
+      transition: all 0.2s ease-out;
+    }
+
+    &:before {
+      right: 1.5%;
+      left: auto;
+      transform: rotate(3deg);
+    }
+
+    &:hover {
+      &:after, &:before {
+        bottom: 20px;
+      }
+    }
   }
 
   &__social-links {
     font-family: 'Permanent Marker', sans-serif;
     display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;
-    margin-top: 120px;
-    font-size: 2em;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.4em;
   }
 
   &__facebook {
-    color: rgb(68, 105, 175);
+    color: rgba(68, 105, 175, 0.9);
   }
   &__twitter {
-    color: rgb(42, 163, 239);
+    color: rgba(42, 163, 239, 0.9);
   }
   &__linkedin {
-    color: rgb(17, 120, 179);
+    color: rgba(17, 120, 179, 0.9);
   }
   &__github {
-    color: rgb(36, 41, 46);
+    color: rgba(36, 41, 46, 0.9);
+  }
+
+  @media (min-width: 600px) {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      flex-basis: 43%;
+      text-align: right;
+      line-height: 3.4;
+      padding-top: 20px;
+      // border: 1px solid grey;
+    }
+
+    &__social-links {
+      flex-basis: 53%;
+      align-items: flex-start;
+      // border: 1px solid grey;
+    }
   }
 }
