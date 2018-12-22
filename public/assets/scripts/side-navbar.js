@@ -16,7 +16,7 @@
     if (length === classes.length) {
       classes.push(className);
     }
-    
+
     element.className = classes.join(' ');
   }
 

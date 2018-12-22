@@ -29,7 +29,7 @@
       font-weight: 100;
       color: rgb(95, 99, 102);
     }
-  
+
     p {
       font-size: 1em;
       color: rgb(106, 110, 112);
@@ -98,7 +98,7 @@
     padding-left: 50px;
     font-size: 1em;
     @include remove-style-ios;
-    
+
     &:focus {
       outline: 1px solid rgb(255, 0, 0);
       box-shadow: 0 0 3px rgb(255, 0, 0);
@@ -134,7 +134,7 @@
       max-width: 1000px;
       padding-bottom: 150px;
     }
-    
+
     &__columns {
       flex-basis: 65%;
       margin: 0 6px;

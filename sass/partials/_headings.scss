@@ -16,7 +16,7 @@
       width: 100%;
       max-width: 200px;
       @include watercolor__brush (
-        100%, 50px, 
+        100%, 50px,
         url('/public/assets/images/brush-strokes/bigblue-brush.png')
       );
     }
@@ -25,7 +25,7 @@
       width: 100%;
       max-width: 250px;
       @include watercolor__brush (
-        100%, 50px, 
+        100%, 50px,
         url('/public/assets/images/brush-strokes/green-brush.png')
       );
     }
@@ -34,7 +34,7 @@
       width: 100%;
       max-width: 250px;
       @include watercolor__brush (
-        100%, 50px, 
+        100%, 50px,
         url('/public/assets/images/brush-strokes/red-brush.png')
       );
     }
